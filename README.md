@@ -1,0 +1,1 @@
+# education_maganurubasappa_school_davanagere
