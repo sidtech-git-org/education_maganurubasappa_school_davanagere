@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Maganuru Basappa School</title>
+  <title>Maganuru Basappa Public School</title>
+
   <meta name="description" content="Maganuru Basappa School — quality education, values, and modern learning." />
 
   <!-- Tailwind CDN -->
@@ -11,12 +13,17 @@
 
   <style>
     /* Smooth scroll + section offset for sticky header */
-    html { scroll-behavior: smooth; }
-    section { scroll-margin-top: 96px; }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    section {
+      scroll-margin-top: 96px;
+    }
 
     /* Simple pattern background */
     .dot-grid {
-      background-image: radial-gradient(rgba(15,23,42,0.08) 1px, transparent 1px);
+      background-image: radial-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 1px);
       background-size: 18px 18px;
     }
   </style>
@@ -31,13 +38,16 @@
         <span class="opacity-90">• Academic Year 2026–27</span>
       </div>
       <div class="flex gap-2">
-        <a href="#enquiry" class="inline-flex items-center justify-center rounded-lg bg-white/10 px-3 py-1.5 text-sm hover:bg-white/20">
-          Enquire Now
+        <a href="#disclosure"
+          class="inline-flex items-center justify-center rounded-lg bg-white/10 px-3 py-1.5 text-sm hover:bg-white/20">
+          Mandatory Disclosure
         </a>
-        <a href="#downloads" class="inline-flex items-center justify-center rounded-lg bg-white px-3 py-1.5 text-sm font-semibold text-slate-900 hover:bg-slate-100">
+        <a href="#downloads"
+          class="inline-flex items-center justify-center rounded-lg bg-white px-3 py-1.5 text-sm font-semibold text-slate-900 hover:bg-slate-100">
           Download Brochure
         </a>
       </div>
+
     </div>
   </div>
 
@@ -46,9 +56,17 @@
     <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between gap-3">
       <a href="#" class="flex items-center gap-3">
         <!-- Replace with your logo -->
-        <div class="h-10 w-10 rounded-xl bg-slate-900 text-white grid place-items-center font-bold">MB</div>
+        <img
+  src="assets/logo.png"
+  alt="Maganuru Basappa Public School Logo"
+  class="h-12 w-12 rounded-xl object-contain"
+/>
+
         <div class="leading-tight">
-          <div class="font-extrabold tracking-tight">Maganuru Basappa School</div>
+          <div class="font-extrabold tracking-tight text-xl sm:text-2xl leading-tight">
+            Maganuru Basappa Public School
+          </div>
+
           <div class="text-xs text-slate-600">Learning • Values • Future-ready</div>
         </div>
       </a>
@@ -65,13 +83,16 @@
       </nav>
 
       <div class="hidden lg:flex items-center gap-2">
-        <a href="#enquiry" class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800">
+        <a href="#enquiry"
+          class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800">
           Apply / Enquire
         </a>
       </div>
 
       <!-- Mobile menu button -->
-      <button id="menuBtn" class="lg:hidden inline-flex items-center justify-center rounded-xl border border-slate-200 px-3 py-2 text-sm hover:bg-slate-50" aria-expanded="false">
+      <button id="menuBtn"
+        class="lg:hidden inline-flex items-center justify-center rounded-xl border border-slate-200 px-3 py-2 text-sm hover:bg-slate-50"
+        aria-expanded="false">
         Menu
       </button>
     </div>
@@ -86,17 +107,32 @@
         <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#events">News & Events</a>
         <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#faq">FAQ</a>
         <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#contact">Contact</a>
-        <a class="mt-2 inline-flex items-center justify-center rounded-xl bg-slate-900 px-4 py-2 font-semibold text-white hover:bg-slate-800" href="#enquiry">
+        <a class="mt-2 inline-flex items-center justify-center rounded-xl bg-slate-900 px-4 py-2 font-semibold text-white hover:bg-slate-800"
+          href="#enquiry">
           Apply / Enquire
         </a>
       </div>
     </div>
   </header>
 
+  
+  <!-- Full Width Banner Section -->
+<section class="w-full">
+  <img 
+    src="assets/img/schoolbuilding.webp"
+    alt="Maganur Basappa Public School & College"
+    class="w-full h-[60vh] object-cover"
+  />
+</section>
+
+
+
   <!-- Hero -->
-  <section class="dot-grid">
-    <div class="mx-auto max-w-7xl px-4 py-14">
-      <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+  <section class="dot-grid pt-10 sm:pt-14">
+
+    <div class="mx-auto max-w-7xl px-4 pt-4 pb-14">
+
+      <div class="grid gap-10 lg:grid-cols-2 lg:items-start">
         <div>
           <p class="inline-flex items-center gap-2 rounded-full bg-slate-900/5 px-4 py-2 text-sm">
             <span class="h-2 w-2 rounded-full bg-slate-900"></span>
@@ -107,49 +143,61 @@
             Welcome to <span class="text-slate-900">Maganuru Basappa School</span>
           </h1>
           <p class="mt-4 text-lg text-slate-700">
-            A modern learning environment with strong values, caring teachers, and opportunities in academics, sports, and co-curricular activities.
+            A modern learning environment with strong values, caring teachers, and opportunities in academics, sports,
+            and co-curricular activities.
           </p>
-
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a href="#enquiry" class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 font-semibold text-white hover:bg-slate-800">
-              Enquire Now
-            </a>
-            <a href="#admissions" class="inline-flex items-center justify-center rounded-xl border border-slate-300 px-5 py-3 font-semibold hover:bg-white">
-              Admission Process
-            </a>
-          </div>
 
           <div class="mt-8 grid grid-cols-3 gap-3 max-w-md">
             <div class="rounded-2xl bg-white border border-slate-200 p-4">
-              <div class="text-2xl font-extrabold">10+</div>
+              <div class="text-2xl font-extrabold">20+</div>
               <div class="text-xs text-slate-600">Years of Trust</div>
             </div>
             <div class="rounded-2xl bg-white border border-slate-200 p-4">
-              <div class="text-2xl font-extrabold">30+</div>
-              <div class="text-xs text-slate-600">Qualified Staff</div>
+              <div class="text-2xl font-extrabold">100+</div>
+              <div class="text-xs text-slate-600">Highly skilled Staff</div>
             </div>
             <div class="rounded-2xl bg-white border border-slate-200 p-4">
-              <div class="text-2xl font-extrabold">100%</div>
-              <div class="text-xs text-slate-600">Care & Safety</div>
+              <div class="text-2xl font-extrabold">10000+</div>
+              <div class="text-xs text-slate-600">Students nurtured</div>
             </div>
           </div>
         </div>
 
         <!-- Hero image card (replace image) -->
         <div class="rounded-3xl bg-white border border-slate-200 shadow-sm overflow-hidden">
-          <div class="aspect-[16/10] bg-slate-100 grid place-items-center">
+          <div class="aspect-[16/9] max-h-[220px] bg-slate-100 grid place-items-center overflow-hidden">
             <!-- Replace with <img src="..." class="h-full w-full object-cover" alt="School campus"> -->
             <div class="text-slate-500 text-sm">Add campus / students photo here</div>
           </div>
-          <div class="p-6">
-            <div class="font-bold">Why parents choose us</div>
-            <ul class="mt-3 grid gap-2 text-sm text-slate-700">
-              <li>• Strong fundamentals + modern teaching</li>
-              <li>• Activity-based learning & life skills</li>
-              <li>• Safe campus, disciplined environment</li>
-              <li>• Transport support (if available)</li>
-            </ul>
-          </div>
+          <div class="p-4">
+            <div class="flex items-center gap-4">
+  <!-- Principal photo -->
+  <img
+    src="assets/principal.jpg"
+    alt="Principal - Maganuru Basappa Public School"
+    class="h-20 w-20 rounded-2xl object-cover border border-slate-200"
+  />
+
+  <div>
+    <div class="font-extrabold text-lg">Principal’s Message</div>
+    <div class="text-sm text-slate-500">Head of Institution</div>
+  </div>
+</div>
+
+<div class="mt-4 text-sm text-slate-700 leading-relaxed max-h-[140px] overflow-hidden">
+  <p>
+    At Maganuru Basappa Public School, we believe that education is not just about
+    academic excellence, but about nurturing responsible, confident, and disciplined
+    individuals. Our dedicated teachers, supportive environment, and strong values ensure
+    that every child is prepared for both life and learning.
+  </p>
+</div>
+
+
+<p class="mt-3 text-sm font-semibold text-slate-800">
+  — Principal, Maganuru Basappa Public School
+</p>
+
         </div>
       </div>
     </div>
@@ -169,7 +217,6 @@
       <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         <!-- Card -->
         <div class="rounded-3xl border border-slate-200 p-6 hover:shadow-sm transition">
-          <div class="h-10 w-10 rounded-2xl bg-slate-900 text-white grid place-items-center font-bold">A</div>
           <h3 class="mt-4 font-bold text-lg">Academic Excellence</h3>
           <p class="mt-2 text-sm text-slate-700">
             Structured learning, regular assessments, and support for every child to improve steadily.
@@ -177,7 +224,6 @@
         </div>
 
         <div class="rounded-3xl border border-slate-200 p-6 hover:shadow-sm transition">
-          <div class="h-10 w-10 rounded-2xl bg-slate-900 text-white grid place-items-center font-bold">S</div>
           <h3 class="mt-4 font-bold text-lg">Safe & Supportive Campus</h3>
           <p class="mt-2 text-sm text-slate-700">
             A disciplined, respectful environment with student wellbeing as the first priority.
@@ -185,7 +231,6 @@
         </div>
 
         <div class="rounded-3xl border border-slate-200 p-6 hover:shadow-sm transition">
-          <div class="h-10 w-10 rounded-2xl bg-slate-900 text-white grid place-items-center font-bold">T</div>
           <h3 class="mt-4 font-bold text-lg">Trained Teachers</h3>
           <p class="mt-2 text-sm text-slate-700">
             Caring educators who use simple explanations, practice, and encouragement to build confidence.
@@ -193,7 +238,6 @@
         </div>
 
         <div class="rounded-3xl border border-slate-200 p-6 hover:shadow-sm transition">
-          <div class="h-10 w-10 rounded-2xl bg-slate-900 text-white grid place-items-center font-bold">C</div>
           <h3 class="mt-4 font-bold text-lg">Co-curricular Activities</h3>
           <p class="mt-2 text-sm text-slate-700">
             Sports, arts, cultural programs, clubs and celebrations that make learning joyful.
@@ -201,7 +245,6 @@
         </div>
 
         <div class="rounded-3xl border border-slate-200 p-6 hover:shadow-sm transition">
-          <div class="h-10 w-10 rounded-2xl bg-slate-900 text-white grid place-items-center font-bold">L</div>
           <h3 class="mt-4 font-bold text-lg">Labs & Digital Learning</h3>
           <p class="mt-2 text-sm text-slate-700">
             Practical learning through science/computer labs and guided use of technology.
@@ -209,7 +252,6 @@
         </div>
 
         <div class="rounded-3xl border border-slate-200 p-6 hover:shadow-sm transition">
-          <div class="h-10 w-10 rounded-2xl bg-slate-900 text-white grid place-items-center font-bold">V</div>
           <h3 class="mt-4 font-bold text-lg">Values & Character</h3>
           <p class="mt-2 text-sm text-slate-700">
             Respect, responsibility, honesty and community spirit — woven into daily school life.
@@ -219,12 +261,16 @@
     </div>
   </section>
 
+
+  
+
   <!-- Academics -->
   <section id="academics" class="py-14 bg-slate-50 border-y border-slate-200">
     <div class="mx-auto max-w-7xl px-4">
       <h2 class="text-3xl font-extrabold tracking-tight">Academics</h2>
       <p class="mt-2 text-slate-700 max-w-3xl">
-        Add your board/curriculum details here (State / CBSE / ICSE), class range, language policy, and assessment approach.
+        Add your board/curriculum details here (State / CBSE / ICSE), class range, language policy, and assessment
+        approach.
       </p>
 
       <div class="mt-8 grid gap-5 lg:grid-cols-3">
@@ -234,7 +280,8 @@
         </div>
         <div class="rounded-3xl bg-white border border-slate-200 p-6">
           <div class="font-bold">Primary</div>
-          <p class="mt-2 text-sm text-slate-700">Strong basics, reading habits, math practice, activities and projects.</p>
+          <p class="mt-2 text-sm text-slate-700">Strong basics, reading habits, math practice, activities and projects.
+          </p>
         </div>
         <div class="rounded-3xl bg-white border border-slate-200 p-6">
           <div class="font-bold">Middle & High School</div>
@@ -251,7 +298,8 @@
         <div>
           <h2 class="text-3xl font-extrabold tracking-tight">Facilities</h2>
           <p class="mt-2 text-slate-700">
-            List what you actually have: classrooms, library, science lab, computer lab, playground, transport, CCTV, first-aid, etc.
+            List what you actually have: classrooms, library, science lab, computer lab, playground, transport, CCTV,
+            first-aid, etc.
           </p>
 
           <div class="mt-6 grid gap-3 sm:grid-cols-2">
@@ -264,18 +312,7 @@
           </div>
         </div>
 
-        <div class="rounded-3xl bg-slate-50 border border-slate-200 p-6">
-          <div class="font-extrabold text-lg">Safety & Care</div>
-          <ul class="mt-3 grid gap-2 text-sm text-slate-700">
-            <li>• Visitor management + secure entry</li>
-            <li>• First-aid support</li>
-            <li>• Regular hygiene & cleanliness</li>
-            <li>• Child-friendly discipline</li>
-          </ul>
-          <p class="mt-4 text-xs text-slate-600">
-            Tip: keep claims accurate. Only mention CCTV/GPS etc if the school truly has it.
-          </p>
-        </div>
+        
       </div>
     </div>
   </section>
@@ -301,10 +338,12 @@
           </div>
 
           <div id="downloads" class="mt-6 grid gap-3 sm:grid-cols-2">
-            <a href="#" class="rounded-2xl bg-white text-slate-900 px-4 py-3 font-semibold text-center hover:bg-slate-100">
+            <a href="#"
+              class="rounded-2xl bg-white text-slate-900 px-4 py-3 font-semibold text-center hover:bg-slate-100">
               Download Brochure (PDF)
             </a>
-            <a href="#" class="rounded-2xl bg-white/10 border border-white/10 px-4 py-3 font-semibold text-center hover:bg-white/15">
+            <a href="#"
+              class="rounded-2xl bg-white/10 border border-white/10 px-4 py-3 font-semibold text-center hover:bg-white/15">
               Mandatory Disclosure
             </a>
           </div>
@@ -318,30 +357,45 @@
           <!-- Replace action with your Formspree endpoint -->
           <form class="mt-5 grid gap-3" action="https://formspree.io/f/yourFormId" method="POST">
             <div class="grid gap-3 sm:grid-cols-2">
-              <input class="w-full rounded-xl border border-slate-200 px-4 py-3" name="first_name" placeholder="First name" required />
-              <input class="w-full rounded-xl border border-slate-200 px-4 py-3" name="last_name" placeholder="Last name" required />
+              <input class="w-full rounded-xl border border-slate-200 px-4 py-3" name="first_name"
+                placeholder="First name" required />
+              <input class="w-full rounded-xl border border-slate-200 px-4 py-3" name="last_name"
+                placeholder="Last name" required />
             </div>
 
             <div class="grid gap-3 sm:grid-cols-2">
-              <input class="w-full rounded-xl border border-slate-200 px-4 py-3" name="phone" placeholder="Mobile number" required />
-              <input class="w-full rounded-xl border border-slate-200 px-4 py-3" type="email" name="email" placeholder="Email (optional)" />
+              <input class="w-full rounded-xl border border-slate-200 px-4 py-3" name="phone"
+                placeholder="Mobile number" required />
+              <input class="w-full rounded-xl border border-slate-200 px-4 py-3" type="email" name="email"
+                placeholder="Email (optional)" />
             </div>
 
             <div class="grid gap-3 sm:grid-cols-2">
               <select class="w-full rounded-xl border border-slate-200 px-4 py-3" name="grade" required>
                 <option value="">Select class</option>
-                <option>Nursery</option><option>LKG</option><option>UKG</option>
-                <option>Grade 1</option><option>Grade 2</option><option>Grade 3</option>
-                <option>Grade 4</option><option>Grade 5</option><option>Grade 6</option>
-                <option>Grade 7</option><option>Grade 8</option><option>Grade 9</option>
+                <option>Nursery</option>
+                <option>LKG</option>
+                <option>UKG</option>
+                <option>Grade 1</option>
+                <option>Grade 2</option>
+                <option>Grade 3</option>
+                <option>Grade 4</option>
+                <option>Grade 5</option>
+                <option>Grade 6</option>
+                <option>Grade 7</option>
+                <option>Grade 8</option>
+                <option>Grade 9</option>
                 <option>Grade 10</option>
               </select>
-              <input class="w-full rounded-xl border border-slate-200 px-4 py-3" name="city" placeholder="City / Village" />
+              <input class="w-full rounded-xl border border-slate-200 px-4 py-3" name="city"
+                placeholder="City / Village" />
             </div>
 
-            <textarea class="w-full rounded-xl border border-slate-200 px-4 py-3" name="message" rows="4" placeholder="Your question (transport, fees, timings, etc.)"></textarea>
+            <textarea class="w-full rounded-xl border border-slate-200 px-4 py-3" name="message" rows="4"
+              placeholder="Your question (transport, fees, timings, etc.)"></textarea>
 
-            <button class="mt-2 inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 font-semibold text-white hover:bg-slate-800">
+            <button
+              class="mt-2 inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 font-semibold text-white hover:bg-slate-800">
               Send Enquiry
             </button>
 
@@ -460,7 +514,8 @@
               </div>
               <div class="rounded-2xl border border-slate-200 p-5">
                 <div class="text-sm text-slate-500">Email</div>
-                <a class="font-semibold hover:underline" href="mailto:maganurubasappaschool@gmail.com">maganurubasappaschool@gmail.com</a>
+                <a class="font-semibold hover:underline"
+                  href="mailto:maganurubasappaschool@gmail.com">maganurubasappaschool@gmail.com</a>
               </div>
             </div>
           </div>
@@ -469,12 +524,8 @@
         <!-- Map -->
         <div class="rounded-3xl overflow-hidden border border-slate-200">
           <!-- Replace src with your Google Maps embed -->
-          <iframe
-            title="School location map"
-            class="w-full h-[360px]"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Davanagere&output=embed">
+          <iframe title="School location map" class="w-full h-[360px]" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Davanagere&output=embed">
           </iframe>
         </div>
       </div>
@@ -517,8 +568,7 @@
 
   <!-- Floating WhatsApp -->
   <!-- Replace number -->
-  <a
-    href="https://wa.me/919999999999?text=Hello%20Maganuru%20Basappa%20School%2C%20I%20want%20admission%20details."
+  <a href="https://wa.me/919999999999?text=Hello%20Maganuru%20Basappa%20School%2C%20I%20want%20admission%20details."
     target="_blank" rel="noopener"
     class="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-lg hover:bg-slate-800">
     WhatsApp
@@ -567,4 +617,5 @@
     });
   </script>
 </body>
+
 </html>
