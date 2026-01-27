@@ -6,7 +6,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Maganuru Basappa Public School</title>
 
-  <meta name="description" content="Maganuru Basappa School — quality education, values, and modern learning." />
+  <meta name="description" content="Maganuru Basappa Public School — quality education, values, and modern learning." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -23,15 +29,49 @@
 
     /* Simple pattern background */
     .dot-grid {
-      background-image: radial-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 1px);
-      background-size: 18px 18px;
+      background-image: radial-gradient(rgba(15, 23, 42, 0.07) 1px, transparent 1px);
+      background-size: 22px 22px;
+    }
+
+
+    :root {
+      --brand-navy: #0b1b3a;
+      --brand-navy-2: #0f2a5f;
+      --brand-gold: #c8a24a;
+      --brand-stone: #f5f6f8;
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    .h-font {
+      font-family: Fraunces, ui-serif, Georgia, serif;
+      letter-spacing: -0.02em;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--brand-navy), var(--brand-navy-2));
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.05);
+    }
+
+    .card-premium {
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(15, 23, 42, 0.10);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      backdrop-filter: blur(8px);
     }
   </style>
 </head>
 
 <body class="bg-white text-slate-900">
   <!-- Top CTA bar -->
-  <div class="bg-slate-900 text-white">
+  <div class="text-white" style="background:linear-gradient(135deg,var(--brand-navy),var(--brand-navy-2));">
     <div class="mx-auto max-w-7xl px-4 py-2 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
       <div class="text-sm">
         <span class="font-semibold">Admissions Open</span>
@@ -56,45 +96,42 @@
     <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between gap-3">
       <a href="#" class="flex items-center gap-3">
         <!-- Replace with your logo -->
-        <img
-  src="assets/logo.png"
-  alt="Maganuru Basappa Public School Logo"
-  class="h-12 w-12 rounded-xl object-contain"
-/>
+        <img src="assets/logo.png" alt="Maganuru Basappa Public School Logo"
+          class="h-12 w-12 rounded-xl object-contain" />
 
-        <div class="leading-tight">
-          <div class="font-extrabold tracking-tight text-xl sm:text-2xl leading-tight">
-            Maganuru Basappa Public School
-          </div>
-
-          <div class="text-xs text-slate-600">Learning • Values • Future-ready</div>
+        <div class="font-extrabold tracking-tight text-xl sm:text-2xl leading-tight h-font">
+          Maganuru Basappa Public School
         </div>
+
+
+        <div class="text-xs text-slate-600">Davanagere, Karnataka</div>
+    </div>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden lg:flex items-center gap-1 text-sm">
+      <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#about">About</a>
+      <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#academics">Academics</a>
+      <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#facilities">Facilities</a>
+      <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#admissions">Admissions</a>
+      <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#events">News & Events</a>
+      <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#faq">FAQ</a>
+      <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#contact">Contact</a>
+    </nav>
+
+    <div class="hidden lg:flex items-center gap-2">
+      <a href="#enquiry"
+        class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800">
+        Apply / Enquire
       </a>
+    </div>
 
-      <!-- Desktop nav -->
-      <nav class="hidden lg:flex items-center gap-1 text-sm">
-        <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#about">About</a>
-        <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#academics">Academics</a>
-        <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#facilities">Facilities</a>
-        <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#admissions">Admissions</a>
-        <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#events">News & Events</a>
-        <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#faq">FAQ</a>
-        <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#contact">Contact</a>
-      </nav>
-
-      <div class="hidden lg:flex items-center gap-2">
-        <a href="#enquiry"
-          class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800">
-          Apply / Enquire
-        </a>
-      </div>
-
-      <!-- Mobile menu button -->
-      <button id="menuBtn"
-        class="lg:hidden inline-flex items-center justify-center rounded-xl border border-slate-200 px-3 py-2 text-sm hover:bg-slate-50"
-        aria-expanded="false">
-        Menu
-      </button>
+    <!-- Mobile menu button -->
+    <button id="menuBtn"
+      class="lg:hidden inline-flex items-center justify-center rounded-xl border border-slate-200 px-3 py-2 text-sm hover:bg-slate-50"
+      aria-expanded="false">
+      Menu
+    </button>
     </div>
 
     <!-- Mobile menu panel -->
@@ -115,15 +152,12 @@
     </div>
   </header>
 
-  
+
   <!-- Full Width Banner Section -->
-<section class="w-full">
-  <img 
-    src="assets/img/schoolbuilding.webp"
-    alt="Maganur Basappa Public School & College"
-    class="w-full h-[60vh] object-cover"
-  />
-</section>
+  <section class="w-full">
+    <img src="assets/img/schoolbuilding.webp" alt="Maganur Basappa Public School & College"
+      class="w-full h-[60vh] object-cover" />
+  </section>
 
 
 
@@ -134,17 +168,13 @@
 
       <div class="grid gap-10 lg:grid-cols-2 lg:items-start">
         <div>
-          <p class="inline-flex items-center gap-2 rounded-full bg-slate-900/5 px-4 py-2 text-sm">
-            <span class="h-2 w-2 rounded-full bg-slate-900"></span>
-            Nurturing confident learners from Nursery to High School
-          </p>
 
-          <h1 class="mt-5 text-4xl font-extrabold tracking-tight sm:text-5xl">
-            Welcome to <span class="text-slate-900">Maganuru Basappa School</span>
+          <h1 class="mt-2 text-4xl sm:text-5xl font-extrabold tracking-tight h-font">
+            Welcome to <span class="text-slate-900">Maganuru Basappa Public School</span>
+
           </h1>
           <p class="mt-4 text-lg text-slate-700">
-            A modern learning environment with strong values, caring teachers, and opportunities in academics, sports,
-            and co-curricular activities.
+            Nurturing confident learners from Nursery to High School
           </p>
 
           <div class="mt-8 grid grid-cols-3 gap-3 max-w-md">
@@ -164,47 +194,46 @@
         </div>
 
         <!-- Hero image card (replace image) -->
-        <div class="rounded-3xl bg-white border border-slate-200 shadow-sm overflow-hidden">
-          <div class="aspect-[16/9] max-h-[220px] bg-slate-100 grid place-items-center overflow-hidden">
-            <!-- Replace with <img src="..." class="h-full w-full object-cover" alt="School campus"> -->
-            <div class="text-slate-500 text-sm">Add campus / students photo here</div>
+        <div class="rounded-3xl card-premium overflow-hidden">
+          <div class="aspect-[16/9] max-h-[220px] bg-slate-100 grid place-items-center overflow-hidden relative">
+            <div class="absolute inset-0"
+              style="background:linear-gradient(180deg, rgba(11,27,58,0.10), rgba(11,27,58,0.02));"></div>
+            <div class="relative text-slate-600 text-sm">Add campus / students photo here</div>
           </div>
+
           <div class="p-4">
             <div class="flex items-center gap-4">
-  <!-- Principal photo -->
-  <img
-    src="assets/principal.jpg"
-    alt="Principal - Maganuru Basappa Public School"
-    class="h-20 w-20 rounded-2xl object-cover border border-slate-200"
-  />
+              <!-- Principal photo -->
+              <img src="assets/principal.jpg" alt="Principal - Maganuru Basappa Public School"
+                class="h-20 w-20 rounded-2xl object-cover border border-slate-200" />
 
-  <div>
-    <div class="font-extrabold text-lg">Principal’s Message</div>
-    <div class="text-sm text-slate-500">Head of Institution</div>
-  </div>
-</div>
+              <div>
+                <div class="font-extrabold text-lg">Principal’s Message</div>
+                <div class="text-sm text-slate-500">Head of Institution</div>
+              </div>
+            </div>
 
-<div class="mt-4 text-sm text-slate-700 leading-relaxed max-h-[140px] overflow-hidden">
-  <p>
-    At Maganuru Basappa Public School, we believe that education is not just about
-    academic excellence, but about nurturing responsible, confident, and disciplined
-    individuals. Our dedicated teachers, supportive environment, and strong values ensure
-    that every child is prepared for both life and learning.
-  </p>
-</div>
+            <div class="mt-4 text-sm text-slate-700 leading-relaxed max-h-[140px] overflow-hidden">
+              <p>
+                At Maganuru Basappa Public School, we believe that education is not just about
+                academic excellence, but about nurturing responsible, confident, and disciplined
+                individuals. Our dedicated teachers, supportive environment, and strong values ensure
+                that every child is prepared for both life and learning.
+              </p>
+            </div>
 
 
-<p class="mt-3 text-sm font-semibold text-slate-800">
-  — Principal, Maganuru Basappa Public School
-</p>
+            <p class="mt-3 text-sm font-semibold text-slate-800">
+              — Principal, Maganuru Basappa Public School
+            </p>
 
+          </div>
         </div>
       </div>
-    </div>
   </section>
 
   <!-- Key Highlights (Podar-style cards) -->
-  <section id="about" class="py-14">
+  <section id="about" class="py-14" style="background:var(--brand-stone);">
     <div class="mx-auto max-w-7xl px-4">
       <div class="flex items-end justify-between gap-4 flex-wrap">
         <div>
@@ -216,42 +245,47 @@
 
       <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         <!-- Card -->
-        <div class="rounded-3xl border border-slate-200 p-6 hover:shadow-sm transition">
+        <div class="rounded-3xl bg-white border border-slate-200 p-6 hover:shadow-md transition">
           <h3 class="mt-4 font-bold text-lg">Academic Excellence</h3>
           <p class="mt-2 text-sm text-slate-700">
             Structured learning, regular assessments, and support for every child to improve steadily.
           </p>
         </div>
 
-        <div class="rounded-3xl border border-slate-200 p-6 hover:shadow-sm transition">
+        <div class="rounded-3xl bg-white border border-slate-200 p-6 hover:shadow-md transition">
+
           <h3 class="mt-4 font-bold text-lg">Safe & Supportive Campus</h3>
           <p class="mt-2 text-sm text-slate-700">
             A disciplined, respectful environment with student wellbeing as the first priority.
           </p>
         </div>
 
-        <div class="rounded-3xl border border-slate-200 p-6 hover:shadow-sm transition">
+        <div class="rounded-3xl bg-white border border-slate-200 p-6 hover:shadow-md transition">
+
           <h3 class="mt-4 font-bold text-lg">Trained Teachers</h3>
           <p class="mt-2 text-sm text-slate-700">
             Caring educators who use simple explanations, practice, and encouragement to build confidence.
           </p>
         </div>
 
-        <div class="rounded-3xl border border-slate-200 p-6 hover:shadow-sm transition">
+        <div class="rounded-3xl bg-white border border-slate-200 p-6 hover:shadow-md transition">
+
           <h3 class="mt-4 font-bold text-lg">Co-curricular Activities</h3>
           <p class="mt-2 text-sm text-slate-700">
             Sports, arts, cultural programs, clubs and celebrations that make learning joyful.
           </p>
         </div>
 
-        <div class="rounded-3xl border border-slate-200 p-6 hover:shadow-sm transition">
+        <div class="rounded-3xl bg-white border border-slate-200 p-6 hover:shadow-md transition">
+
           <h3 class="mt-4 font-bold text-lg">Labs & Digital Learning</h3>
           <p class="mt-2 text-sm text-slate-700">
             Practical learning through science/computer labs and guided use of technology.
           </p>
         </div>
 
-        <div class="rounded-3xl border border-slate-200 p-6 hover:shadow-sm transition">
+        <div class="rounded-3xl bg-white border border-slate-200 p-6 hover:shadow-md transition">
+
           <h3 class="mt-4 font-bold text-lg">Values & Character</h3>
           <p class="mt-2 text-sm text-slate-700">
             Respect, responsibility, honesty and community spirit — woven into daily school life.
@@ -262,34 +296,45 @@
   </section>
 
 
-  
+
 
   <!-- Academics -->
   <section id="academics" class="py-14 bg-slate-50 border-y border-slate-200">
     <div class="mx-auto max-w-7xl px-4">
       <h2 class="text-3xl font-extrabold tracking-tight">Academics</h2>
-      <p class="mt-2 text-slate-700 max-w-3xl">
-        Add your board/curriculum details here (State / CBSE / ICSE), class range, language policy, and assessment
-        approach.
-      </p>
 
       <div class="mt-8 grid gap-5 lg:grid-cols-3">
+
+        <!-- Pre-Primary -->
         <div class="rounded-3xl bg-white border border-slate-200 p-6">
-          <div class="font-bold">Pre-Primary</div>
-          <p class="mt-2 text-sm text-slate-700">Play-based learning, phonics, numeracy, motor skills, storytelling.</p>
+          <div class="font-extrabold text-lg">Pre-Primary</div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc list-inside">
+            <li>Playgroup</li>
+            <li>Kindergarten</li>
+          </ul>
         </div>
+
+        <!-- Primary -->
         <div class="rounded-3xl bg-white border border-slate-200 p-6">
-          <div class="font-bold">Primary</div>
-          <p class="mt-2 text-sm text-slate-700">Strong basics, reading habits, math practice, activities and projects.
-          </p>
+          <div class="font-extrabold text-lg">Primary</div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc list-inside">
+            <li>Class I – V</li>
+          </ul>
         </div>
+
+        <!-- Middle & High School -->
         <div class="rounded-3xl bg-white border border-slate-200 p-6">
-          <div class="font-bold">Middle & High School</div>
-          <p class="mt-2 text-sm text-slate-700">Concept clarity, labs, exam readiness, mentoring, career awareness.</p>
+          <div class="font-extrabold text-lg">Middle & High School</div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc list-inside">
+            <li>Class VI – VII</li>
+            <li>Class VIII – X</li>
+          </ul>
         </div>
+
       </div>
     </div>
   </section>
+
 
   <!-- Facilities -->
   <section id="facilities" class="py-14">
@@ -297,10 +342,6 @@
       <div class="grid gap-10 lg:grid-cols-2 lg:items-start">
         <div>
           <h2 class="text-3xl font-extrabold tracking-tight">Facilities</h2>
-          <p class="mt-2 text-slate-700">
-            List what you actually have: classrooms, library, science lab, computer lab, playground, transport, CCTV,
-            first-aid, etc.
-          </p>
 
           <div class="mt-6 grid gap-3 sm:grid-cols-2">
             <div class="rounded-2xl border border-slate-200 p-4">Spacious Classrooms</div>
@@ -312,7 +353,7 @@
           </div>
         </div>
 
-        
+
       </div>
     </div>
   </section>
@@ -323,9 +364,6 @@
       <div class="grid gap-10 lg:grid-cols-2 lg:items-start">
         <div>
           <h2 class="text-3xl font-extrabold tracking-tight">Admissions</h2>
-          <p class="mt-2 text-white/80">
-            Keep this very clear: steps, documents, office timings, and how parents can apply.
-          </p>
 
           <div class="mt-6 rounded-3xl bg-white/5 border border-white/10 p-6">
             <div class="font-bold">Admission Process</div>
@@ -414,7 +452,6 @@
       <div class="flex items-end justify-between flex-wrap gap-4">
         <div>
           <h2 class="text-3xl font-extrabold tracking-tight">News & Events</h2>
-          <p class="mt-2 text-slate-700">Share celebrations, competitions, achievements, and announcements.</p>
         </div>
         <a class="text-sm font-semibold hover:underline" href="#contact">Share an update →</a>
       </div>
@@ -455,7 +492,6 @@
   <section id="faq" class="py-14 bg-slate-50 border-y border-slate-200">
     <div class="mx-auto max-w-4xl px-4">
       <h2 class="text-3xl font-extrabold tracking-tight">Frequently Asked Questions</h2>
-      <p class="mt-2 text-slate-700">Clear answers build trust with parents.</p>
 
       <div class="mt-8 grid gap-3">
         <!-- Item -->
@@ -537,7 +573,7 @@
     <div class="mx-auto max-w-7xl px-4 py-10">
       <div class="grid gap-8 lg:grid-cols-3">
         <div>
-          <div class="font-extrabold">Maganuru Basappa School</div>
+          <div class="font-extrabold">Maganuru Basappa Public School</div>
           <p class="mt-2 text-sm text-slate-600">
             A place where every child is guided with care, discipline, and opportunities to shine.
           </p>
@@ -560,7 +596,7 @@
       </div>
 
       <div class="mt-10 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between text-xs text-slate-500">
-        <div>© <span id="year"></span> Maganuru Basappa School. All rights reserved.</div>
+        <div>© <span id="year"></span> Maganuru Basappa Public School. All rights reserved.</div>
         <div>Built by SidTech</div>
       </div>
     </div>
