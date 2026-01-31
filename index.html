@@ -28,7 +28,9 @@
     }
 
     /* Make in-page anchors respect sticky header */
-[id] { scroll-margin-top: 96px; }
+    [id] {
+      scroll-margin-top: 96px;
+    }
 
 
     /* Simple pattern background */
@@ -71,15 +73,70 @@
       backdrop-filter: blur(8px);
     }
 
-     /* Simple inline SVG icons (use currentColor) */
-  .icon {
-    width: 22px;
-    height: 22px;
-  }
+    /* Simple inline SVG icons (use currentColor) */
+    .icon {
+      width: 22px;
+      height: 22px;
+    }
+
+    .nav-pill {
+  padding: 0.45rem 0.9rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  color: #0f172a; /* slate-900 */
+  transition: all 0.25s ease;
+}
+
+.nav-pill:hover {
+  background: rgba(15, 23, 42, 0.06);
+}
+
+.nav-pill:focus-visible {
+  outline: 2px solid rgba(15, 42, 95, 0.35);
+  outline-offset: 2px;
+}
+
   </style>
 </head>
 
-<body class="bg-white text-slate-900">
+<body class="text-slate-900 bg-[#f3f6fb]">
+  <!-- Global soft background -->
+  <div class="pointer-events-none fixed inset-0 -z-10">
+    <div class="absolute inset-0 bg-[#f3f6fb]"></div>
+    <div class="absolute inset-0" style="background:
+        radial-gradient(900px 500px at 20% 10%, rgba(15,42,95,0.10), transparent 60%),
+        radial-gradient(700px 420px at 85% 20%, rgba(11,27,58,0.06), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,0.55), rgba(243,246,251,1));
+      ">
+    </div>
+     <!-- Decorative education icons (very light) -->
+  <svg class="absolute left-8 top-28 opacity-[0.10]" width="140" height="140" viewBox="0 0 64 64" fill="none" stroke="#0b1b3a" stroke-width="1.5">
+    <!-- Graduation cap -->
+    <path d="M8 22l24-10 24 10-24 10L8 22z"/>
+    <path d="M16 26v10c0 6 32 6 32 0V26"/>
+    <path d="M48 26v10"/>
+  </svg>
+
+  <svg class="absolute right-10 top-44 opacity-[0.04]" width="160" height="160" viewBox="0 0 64 64" fill="none" stroke="#0f2a5f" stroke-width="1.5">
+    <!-- Pencil -->
+    <path d="M14 50l8-2 28-28-6-6-28 28-2 8z"/>
+    <path d="M40 14l6 6"/>
+  </svg>
+
+  <svg class="absolute left-14 bottom-24 opacity-[0.04]" width="150" height="150" viewBox="0 0 64 64" fill="none" stroke="#0f2a5f" stroke-width="1.5">
+    <!-- Book -->
+    <path d="M10 14h18c4 0 8 2 8 6v32c0-4-4-6-8-6H10V14z"/>
+    <path d="M54 14H36c-4 0-8 2-8 6v32c0-4 4-6 8-6h18V14z"/>
+  </svg>
+
+  <svg class="absolute right-16 bottom-16 opacity-[0.04]" width="140" height="140" viewBox="0 0 64 64" fill="none" stroke="#0b1b3a" stroke-width="1.5">
+    <!-- Sports ball -->
+    <circle cx="32" cy="32" r="18"/>
+    <path d="M14 32c6 2 12-3 14-10"/>
+    <path d="M50 32c-6-2-12 3-14 10"/>
+  </svg>
+</div>
+  </div>
   <!-- Top CTA bar -->
   <div class="text-white" style="background:linear-gradient(135deg,var(--brand-navy),var(--brand-navy-2));">
     <div class="mx-auto max-w-7xl px-4 py-2 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
@@ -105,44 +162,46 @@
   <header class="sticky top-0 z-50 bg-white/85 backdrop-blur border-b border-slate-200">
     <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between gap-3">
       <a href="#" class="flex items-center gap-3">
-  <img
-    src="assets/logo.png"
-    alt="Maganuru Basappa Public School Logo"
-    class="h-12 w-12 rounded-xl object-contain"
-  />
+        <img src="assets/logo.png" alt="Maganuru Basappa Public School Logo"
+          class="h-12 w-12 rounded-xl object-contain" />
 
-  <div class="leading-tight">
-    <div class="font-extrabold tracking-tight text-xl sm:text-2xl leading-tight h-font">
-      Maganuru Basappa Public School
-    </div>
-    <div class="text-xs text-slate-600">Taralabalu Badavane, Davanagere</div>
+        <div class="leading-tight">
+  <div class="font-extrabold tracking-tight text-lg sm:text-xl h-font">
+    Maganuru Basappa Public School
   </div>
-</a>
+  <div class="text-[11px] text-slate-500">
+    Taralabalu Badavane, Davanagere
+  </div>
+</div>
 
-
-    <!-- Desktop nav -->
-     <nav class="hidden lg:flex items-center gap-1 text-sm">
-      <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#about">About</a>
-      <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#academics">Academics</a>
-      <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#facilities">Facilities</a>
-      <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#admissions">Admissions</a>
-      <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#events">News & Events</a>
-      <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#faq">FAQ</a>
-      <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#contact">Contact</a>
-    </nav>
-
-    <div class="hidden lg:flex items-center gap-2">
-      <a href="#admissions" class="btn-primary inline-flex items-center justify-center rounded-xl px-3 py-2 text-sm font-semibold">
-        Apply / Enquire
       </a>
-      
-    </div>
 
-    <button id="menuBtn"
-      class="lg:hidden inline-flex items-center justify-center rounded-xl border border-slate-200 px-3 py-2 text-sm hover:bg-slate-50"
-      aria-expanded="false">
-      Menu
-    </button>
+
+      <!-- Desktop nav -->
+      <nav class="hidden lg:flex items-center gap-1 text-sm">
+  <a class="nav-pill" href="#about">About</a>
+  <a class="nav-pill" href="#academics">Academics</a>
+  <a class="nav-pill" href="#facilities">Facilities</a>
+  <a class="nav-pill" href="#admissions">Admissions</a>
+  <a class="nav-pill" href="#events">News & Events</a>
+  <a class="nav-pill" href="#faq">FAQ</a>
+  <a class="nav-pill" href="#contact">Contact</a>
+</nav>
+
+
+      <div class="hidden lg:flex items-center gap-2">
+        <a href="#admissions"
+          class="btn-primary inline-flex items-center justify-center rounded-xl px-3 py-2 text-sm font-semibold">
+          Apply / Enquire
+        </a>
+
+      </div>
+
+      <button id="menuBtn"
+        class="lg:hidden inline-flex items-center justify-center rounded-xl border border-slate-200 px-3 py-2 text-sm hover:bg-slate-50"
+        aria-expanded="false">
+        Menu
+      </button>
 
     </div>
 
@@ -182,148 +241,149 @@
 
 
   <!-- Hero -->
-<section class="dot-grid pt-10 sm:pt-14">
-  <div class="mx-auto max-w-7xl px-4 pt-4 pb-14">
+  <section class="dot-grid pt-10 sm:pt-14">
+    <div class="mx-auto max-w-7xl px-4 pt-4 pb-14">
 
-    <div class="grid gap-10">
+      <div class="grid gap-10">
 
-      <!-- Welcome block -->
-      <div>
-        <h1 class="mt-2 text-4xl sm:text-5xl font-extrabold tracking-tight h-font lg:whitespace-nowrap">
-          Welcome to <span class="text-slate-900">Maganuru Basappa Public School</span>
-        </h1>
+        <!-- Welcome block -->
+        <div>
+          <h1 class="mt-2 text-4xl sm:text-5xl font-extrabold tracking-tight h-font lg:whitespace-nowrap">
+            Welcome to <span class="text-slate-900">Maganuru Basappa Public School</span>
+          </h1>
 
-        <p class="mt-4 text-lg text-slate-700">
-          Nurturing confident learners from Nursery to High School
-        </p>
+          <p class="mt-4 text-lg text-slate-700">
+            Nurturing confident learners from Nursery to High School
+          </p>
 
-        <div class="mt-8 grid grid-cols-3 gap-3 max-w-md">
-          <div class="rounded-2xl bg-white border border-slate-200 p-4">
-            <div class="text-2xl font-extrabold">20+</div>
-            <div class="text-xs text-slate-600">Years of Trust</div>
-          </div>
-          <div class="rounded-2xl bg-white border border-slate-200 p-4">
-            <div class="text-2xl font-extrabold">100+</div>
-            <div class="text-xs text-slate-600">Highly skilled Staff</div>
-          </div>
-          <div class="rounded-2xl bg-white border border-slate-200 p-4">
-            <div class="text-2xl font-extrabold">10000+</div>
-            <div class="text-xs text-slate-600">Students nurtured</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Image + Principal message (LEFT, below) -->
-      <div class="rounded-3xl card-premium overflow-hidden max-w-3xl">
-
-
-        <!-- Principal message -->
-        <div class="p-6">
-          <div class="flex items-center gap-4">
-            <img
-              src="assets/principal.jpg"
-              alt="Principal - Maganuru Basappa Public School"
-              class="h-16 w-16 rounded-2xl object-cover border border-slate-200"
-            />
-            <div>
-              <div class="font-extrabold text-lg">Principal’s Message</div>
-              <div class="text-sm text-slate-500">Head of Institution</div>
+          <div class="mt-8 grid grid-cols-3 gap-3 max-w-md">
+            <div class="rounded-2xl bg-white border border-slate-200 p-4">
+              <div class="text-2xl font-extrabold">20+</div>
+              <div class="text-xs text-slate-600">Years of Trust</div>
+            </div>
+            <div class="rounded-2xl bg-white border border-slate-200 p-4">
+              <div class="text-2xl font-extrabold">100+</div>
+              <div class="text-xs text-slate-600">Highly skilled Staff</div>
+            </div>
+            <div class="rounded-2xl bg-white border border-slate-200 p-4">
+              <div class="text-2xl font-extrabold">10000+</div>
+              <div class="text-xs text-slate-600">Students nurtured</div>
             </div>
           </div>
-
-          <p class="mt-4 text-sm text-slate-700 leading-relaxed">
-            At Maganuru Basappa Public School, we believe that education is not just about
-            academic excellence, but about nurturing responsible, confident, and disciplined
-            individuals. Our dedicated teachers, supportive environment, and strong values ensure
-            that every child is prepared for both life and learning.
-          </p>
-
-          <p class="mt-3 text-sm font-semibold text-slate-800">
-            — Principal, Maganuru Basappa Public School
-          </p>
         </div>
-      </div>
 
+        <!-- Image + Principal message (LEFT, below) -->
+        <div class="rounded-3xl card-premium overflow-hidden max-w-3xl">
+
+
+          <!-- Principal message -->
+          <div class="p-6">
+            <div class="flex items-center gap-4">
+              <img src="assets/principal.jpg" alt="Principal - Maganuru Basappa Public School"
+                class="h-16 w-16 rounded-2xl object-cover border border-slate-200" />
+              <div>
+                <div class="font-extrabold text-lg">Principal’s Message</div>
+                <div class="text-sm text-slate-500">Head of Institution</div>
+              </div>
+            </div>
+
+            <p class="mt-4 text-sm text-slate-700 leading-relaxed">
+              At Maganuru Basappa Public School, we believe that education is not just about
+              academic excellence, but about nurturing responsible, confident, and disciplined
+              individuals. Our dedicated teachers, supportive environment, and strong values ensure
+              that every child is prepared for both life and learning.
+            </p>
+
+            <p class="mt-3 text-sm font-semibold text-slate-800">
+              — Principal, Maganuru Basappa Public School
+            </p>
+          </div>
+        </div>
+
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- Key Highlights (Podar-style cards) -->
-  <section id="about" class="py-14" style="background:var(--brand-stone);">
+  <section id="about" class="py-14">
     <div class="mx-auto max-w-7xl px-4">
       <div class="flex items-end justify-between gap-4 flex-wrap">
         <div>
           <h2 class="text-3xl font-extrabold tracking-tight">Key Highlights</h2>
           <p class="mt-2 text-slate-700">The core strengths of our school experience.</p>
+
+          <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Card -->
+            <div class="rounded-3xl bg-white/80 backdrop-blur border border-slate-200/70 p-6 hover:shadow-md transition">
+
+              <h3 class="mt-4 font-bold text-lg">Academic Excellence</h3>
+              <p class="mt-2 text-sm text-slate-700">
+                Structured learning, regular assessments, and support for every child to improve steadily.
+              </p>
+            </div>
+
+            <div class="rounded-3xl bg-white/80 backdrop-blur border border-slate-200/70 p-6 hover:shadow-md transition">
+
+
+              <h3 class="mt-4 font-bold text-lg">Safe & Supportive Campus</h3>
+              <p class="mt-2 text-sm text-slate-700">
+                A disciplined, respectful environment with student wellbeing as the first priority.
+              </p>
+            </div>
+
+            <div class="rounded-3xl bg-white/80 backdrop-blur border border-slate-200/70 p-6 hover:shadow-md transition">
+
+
+              <h3 class="mt-4 font-bold text-lg">Trained Teachers</h3>
+              <p class="mt-2 text-sm text-slate-700">
+                Caring educators who use simple explanations, practice, and encouragement to build confidence.
+              </p>
+            </div>
+
+            <div class="rounded-3xl bg-white/80 backdrop-blur border border-slate-200/70 p-6 hover:shadow-md transition">
+
+
+              <h3 class="mt-4 font-bold text-lg">Co-curricular Activities</h3>
+              <p class="mt-2 text-sm text-slate-700">
+                Sports, arts, cultural programs, clubs and celebrations that make learning joyful.
+              </p>
+            </div>
+
+            <div class="rounded-3xl bg-white/80 backdrop-blur border border-slate-200/70 p-6 hover:shadow-md transition">
+
+
+              <h3 class="mt-4 font-bold text-lg">Labs & Digital Learning</h3>
+              <p class="mt-2 text-sm text-slate-700">
+                Practical learning through science/computer labs and guided use of technology.
+              </p>
+            </div>
+
+            <div class="rounded-3xl bg-white/80 backdrop-blur border border-slate-200/70 p-6 hover:shadow-md transition">
+
+
+              <h3 class="mt-4 font-bold text-lg">Values & Character</h3>
+              <p class="mt-2 text-sm text-slate-700">
+                Respect, responsibility, honesty and community spirit — woven into daily school life.
+              </p>
+            </div>
+          </div>
         </div>
-        <a href="#contact" class="text-sm font-semibold hover:underline">Talk to us →</a>
-      </div>
-
-      <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- Card -->
-        <div class="rounded-3xl bg-white border border-slate-200 p-6 hover:shadow-md transition">
-          <h3 class="mt-4 font-bold text-lg">Academic Excellence</h3>
-          <p class="mt-2 text-sm text-slate-700">
-            Structured learning, regular assessments, and support for every child to improve steadily.
-          </p>
-        </div>
-
-        <div class="rounded-3xl bg-white border border-slate-200 p-6 hover:shadow-md transition">
-
-          <h3 class="mt-4 font-bold text-lg">Safe & Supportive Campus</h3>
-          <p class="mt-2 text-sm text-slate-700">
-            A disciplined, respectful environment with student wellbeing as the first priority.
-          </p>
-        </div>
-
-        <div class="rounded-3xl bg-white border border-slate-200 p-6 hover:shadow-md transition">
-
-          <h3 class="mt-4 font-bold text-lg">Trained Teachers</h3>
-          <p class="mt-2 text-sm text-slate-700">
-            Caring educators who use simple explanations, practice, and encouragement to build confidence.
-          </p>
-        </div>
-
-        <div class="rounded-3xl bg-white border border-slate-200 p-6 hover:shadow-md transition">
-
-          <h3 class="mt-4 font-bold text-lg">Co-curricular Activities</h3>
-          <p class="mt-2 text-sm text-slate-700">
-            Sports, arts, cultural programs, clubs and celebrations that make learning joyful.
-          </p>
-        </div>
-
-        <div class="rounded-3xl bg-white border border-slate-200 p-6 hover:shadow-md transition">
-
-          <h3 class="mt-4 font-bold text-lg">Labs & Digital Learning</h3>
-          <p class="mt-2 text-sm text-slate-700">
-            Practical learning through science/computer labs and guided use of technology.
-          </p>
-        </div>
-
-        <div class="rounded-3xl bg-white border border-slate-200 p-6 hover:shadow-md transition">
-
-          <h3 class="mt-4 font-bold text-lg">Values & Character</h3>
-          <p class="mt-2 text-sm text-slate-700">
-            Respect, responsibility, honesty and community spirit — woven into daily school life.
-          </p>
-        </div>
-      </div>
-    </div>
   </section>
 
 
 
 
   <!-- Academics -->
-  <section id="academics" class="py-14 bg-slate-50 border-y border-slate-200">
+  <section id="academics" class="py-14 border-y border-slate-200/60">
     <div class="mx-auto max-w-7xl px-4">
       <h2 class="text-3xl font-extrabold tracking-tight">Academics</h2>
 
       <div class="mt-8 grid gap-5 lg:grid-cols-3">
 
         <!-- Pre-Primary -->
-        <div class="rounded-3xl bg-white border border-slate-200 p-6">
+        <div class="rounded-3xl bg-white/80 backdrop-blur border border-slate-200/70 p-6 hover:shadow-md transition">
+
           <div class="font-extrabold text-lg">Pre-Primary</div>
           <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc list-inside">
             <li>Playgroup</li>
@@ -332,7 +392,8 @@
         </div>
 
         <!-- Primary -->
-        <div class="rounded-3xl bg-white border border-slate-200 p-6">
+        <div class="rounded-3xl bg-white/80 backdrop-blur border border-slate-200/70 p-6 hover:shadow-md transition">
+
           <div class="font-extrabold text-lg">Primary</div>
           <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc list-inside">
             <li>Class I – V</li>
@@ -340,7 +401,8 @@
         </div>
 
         <!-- Middle & High School -->
-        <div class="rounded-3xl bg-white border border-slate-200 p-6">
+        <div class="rounded-3xl bg-white/80 backdrop-blur border border-slate-200/70 p-6 hover:shadow-md transition">
+
           <div class="font-extrabold text-lg">Middle & High School</div>
           <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc list-inside">
             <li>Class VI – VII</li>
@@ -354,175 +416,199 @@
 
 
   <!-- Campus Facilities -->
-<section id="facilities" class="py-16">
-  <div class="mx-auto max-w-7xl px-4">
+  <section id="facilities" class="py-16">
+    <div class="mx-auto max-w-7xl px-4">
 
-    <h2 class="text-3xl font-extrabold tracking-tight">
-      Campus Facilities & Infrastructure
-    </h2>
+      <h2 class="text-3xl font-extrabold tracking-tight">
+        Campus Facilities & Infrastructure
+      </h2>
 
-    <p class="mt-2 text-sm text-slate-500 max-w-2xl">
-      Well-designed spaces that support learning, safety, and all-round development.
-    </p>
+      <p class="mt-2 text-sm text-slate-500 max-w-2xl">
+        Well-designed spaces that support learning, safety, and all-round development.
+      </p>
 
-    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-  <!-- Spacious Classrooms -->
-  <a href="#gallery-classrooms"
-     class="group rounded-2xl border border-slate-200 p-6 bg-white hover:shadow-md transition">
-    <div class="flex items-start gap-3">
-      <div class="rounded-xl bg-slate-900/5 p-2 text-slate-900">
-        <!-- icon: classroom -->
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 19h18" />
-          <path d="M6 19V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12" />
-          <path d="M9 9h6" />
-          <path d="M9 13h6" />
-        </svg>
+        <!-- Spacious Classrooms -->
+        <a href="#gallery-classrooms"
+          class="group rounded-2xl border border-slate-200 p-6 bg-white hover:shadow-md transition">
+          <div class="flex items-start gap-3">
+            <div class="rounded-xl bg-slate-900/5 p-2 text-slate-900">
+              <!-- icon: classroom -->
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 19h18" />
+                <path d="M6 19V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12" />
+                <path d="M9 9h6" />
+                <path d="M9 13h6" />
+              </svg>
+            </div>
+
+            <div>
+              <div class="font-semibold text-lg">Spacious Classrooms</div>
+              <p class="mt-1 text-sm text-slate-600">Well-ventilated, student-friendly learning spaces</p>
+              <div class="mt-4 text-sm font-semibold text-slate-900/80 group-hover:text-slate-900">
+                View Photos →
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Science Laboratory -->
+        <a href="#gallery-science-lab"
+          class="group rounded-2xl border border-slate-200 p-6 bg-white hover:shadow-md transition">
+          <div class="flex items-start gap-3">
+            <div class="rounded-xl bg-slate-900/5 p-2 text-slate-900">
+              <!-- icon: flask -->
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 2v6l-4.5 8a4 4 0 0 0 3.5 6h6a4 4 0 0 0 3.5-6L14 8V2" />
+                <path d="M8.5 14h7" />
+              </svg>
+            </div>
+
+            <div>
+              <div class="font-semibold text-lg">Science Laboratory</div>
+              <p class="mt-1 text-sm text-slate-600">Practical learning with basic lab equipment</p>
+              <div class="mt-4 text-sm font-semibold text-slate-900/80 group-hover:text-slate-900">
+                View Photos →
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Computer Lab -->
+        <a href="#gallery-computer-lab"
+          class="group rounded-2xl border border-slate-200 p-6 bg-white hover:shadow-md transition">
+          <div class="flex items-start gap-3">
+            <div class="rounded-xl bg-slate-900/5 p-2 text-slate-900">
+              <!-- icon: monitor -->
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="12" rx="2" />
+                <path d="M8 20h8" />
+                <path d="M12 16v4" />
+              </svg>
+            </div>
+
+            <div>
+              <div class="font-semibold text-lg">Computer Lab</div>
+              <p class="mt-1 text-sm text-slate-600">Digital exposure and guided computer learning</p>
+              <div class="mt-4 text-sm font-semibold text-slate-900/80 group-hover:text-slate-900">
+                View Photos →
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Library -->
+        <a href="#gallery-library"
+          class="group rounded-2xl border border-slate-200 p-6 bg-white hover:shadow-md transition">
+          <div class="flex items-start gap-3">
+            <div class="rounded-xl bg-slate-900/5 p-2 text-slate-900">
+              <!-- icon: book -->
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19a2 2 0 0 0 2 2h14" />
+                <path d="M6 2h12a2 2 0 0 1 2 2v16H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
+                <path d="M8 6h8" />
+              </svg>
+            </div>
+
+            <div>
+              <div class="font-semibold text-lg">Library</div>
+              <p class="mt-1 text-sm text-slate-600">Reading resources to build strong learning habits</p>
+              <div class="mt-4 text-sm font-semibold text-slate-900/80 group-hover:text-slate-900">
+                View Photos →
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Playground -->
+        <a href="#gallery-playground"
+          class="group rounded-2xl border border-slate-200 p-6 bg-white hover:shadow-md transition">
+          <div class="flex items-start gap-3">
+            <div class="rounded-xl bg-slate-900/5 p-2 text-slate-900">
+              <!-- icon: ball -->
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3.5 11.5c3 .5 6.5-1 8-4" />
+                <path d="M20.5 12.5c-3-.5-6.5 1-8 4" />
+              </svg>
+            </div>
+
+            <div>
+              <div class="font-semibold text-lg">Playground</div>
+              <p class="mt-1 text-sm text-slate-600">Outdoor space for sports and physical development</p>
+              <div class="mt-4 text-sm font-semibold text-slate-900/80 group-hover:text-slate-900">
+                View Photos →
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Transport Facility -->
+        <a href="#gallery-transport"
+          class="group rounded-2xl border border-slate-200 p-6 bg-white hover:shadow-md transition">
+          <div class="flex items-start gap-3">
+            <div class="rounded-xl bg-slate-900/5 p-2 text-slate-900">
+              <!-- icon: bus -->
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 16V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v10" />
+                <path d="M6 16h12" />
+                <path d="M7 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                <path d="M17 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                <path d="M6 12h12" />
+              </svg>
+            </div>
+
+            <div>
+              <div class="font-semibold text-lg">Transport Facility</div>
+              <p class="mt-1 text-sm text-slate-600">Safe transportation (where available)</p>
+              <div class="mt-4 text-sm font-semibold text-slate-900/80 group-hover:text-slate-900">
+                View Photos →
+              </div>
+            </div>
+          </div>
+        </a>
+
       </div>
 
-      <div>
-        <div class="font-semibold text-lg">Spacious Classrooms</div>
-        <p class="mt-1 text-sm text-slate-600">Well-ventilated, student-friendly learning spaces</p>
-        <div class="mt-4 text-sm font-semibold text-slate-900/80 group-hover:text-slate-900">
-          View Photos →
-        </div>
-      </div>
     </div>
-  </a>
-
-  <!-- Science Laboratory -->
-  <a href="#gallery-science-lab"
-     class="group rounded-2xl border border-slate-200 p-6 bg-white hover:shadow-md transition">
-    <div class="flex items-start gap-3">
-      <div class="rounded-xl bg-slate-900/5 p-2 text-slate-900">
-        <!-- icon: flask -->
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M10 2v6l-4.5 8a4 4 0 0 0 3.5 6h6a4 4 0 0 0 3.5-6L14 8V2" />
-          <path d="M8.5 14h7" />
-        </svg>
-      </div>
-
-      <div>
-        <div class="font-semibold text-lg">Science Laboratory</div>
-        <p class="mt-1 text-sm text-slate-600">Practical learning with basic lab equipment</p>
-        <div class="mt-4 text-sm font-semibold text-slate-900/80 group-hover:text-slate-900">
-          View Photos →
-        </div>
-      </div>
-    </div>
-  </a>
-
-  <!-- Computer Lab -->
-  <a href="#gallery-computer-lab"
-     class="group rounded-2xl border border-slate-200 p-6 bg-white hover:shadow-md transition">
-    <div class="flex items-start gap-3">
-      <div class="rounded-xl bg-slate-900/5 p-2 text-slate-900">
-        <!-- icon: monitor -->
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="4" width="18" height="12" rx="2" />
-          <path d="M8 20h8" />
-          <path d="M12 16v4" />
-        </svg>
-      </div>
-
-      <div>
-        <div class="font-semibold text-lg">Computer Lab</div>
-        <p class="mt-1 text-sm text-slate-600">Digital exposure and guided computer learning</p>
-        <div class="mt-4 text-sm font-semibold text-slate-900/80 group-hover:text-slate-900">
-          View Photos →
-        </div>
-      </div>
-    </div>
-  </a>
-
-  <!-- Library -->
-  <a href="#gallery-library"
-     class="group rounded-2xl border border-slate-200 p-6 bg-white hover:shadow-md transition">
-    <div class="flex items-start gap-3">
-      <div class="rounded-xl bg-slate-900/5 p-2 text-slate-900">
-        <!-- icon: book -->
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 19a2 2 0 0 0 2 2h14" />
-          <path d="M6 2h12a2 2 0 0 1 2 2v16H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
-          <path d="M8 6h8" />
-        </svg>
-      </div>
-
-      <div>
-        <div class="font-semibold text-lg">Library</div>
-        <p class="mt-1 text-sm text-slate-600">Reading resources to build strong learning habits</p>
-        <div class="mt-4 text-sm font-semibold text-slate-900/80 group-hover:text-slate-900">
-          View Photos →
-        </div>
-      </div>
-    </div>
-  </a>
-
-  <!-- Playground -->
-  <a href="#gallery-playground"
-     class="group rounded-2xl border border-slate-200 p-6 bg-white hover:shadow-md transition">
-    <div class="flex items-start gap-3">
-      <div class="rounded-xl bg-slate-900/5 p-2 text-slate-900">
-        <!-- icon: ball -->
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="9" />
-          <path d="M3.5 11.5c3 .5 6.5-1 8-4" />
-          <path d="M20.5 12.5c-3-.5-6.5 1-8 4" />
-        </svg>
-      </div>
-
-      <div>
-        <div class="font-semibold text-lg">Playground</div>
-        <p class="mt-1 text-sm text-slate-600">Outdoor space for sports and physical development</p>
-        <div class="mt-4 text-sm font-semibold text-slate-900/80 group-hover:text-slate-900">
-          View Photos →
-        </div>
-      </div>
-    </div>
-  </a>
-
-  <!-- Transport Facility -->
-  <a href="#gallery-transport"
-     class="group rounded-2xl border border-slate-200 p-6 bg-white hover:shadow-md transition">
-    <div class="flex items-start gap-3">
-      <div class="rounded-xl bg-slate-900/5 p-2 text-slate-900">
-        <!-- icon: bus -->
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M6 16V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v10" />
-          <path d="M6 16h12" />
-          <path d="M7 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
-          <path d="M17 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
-          <path d="M6 12h12" />
-        </svg>
-      </div>
-
-      <div>
-        <div class="font-semibold text-lg">Transport Facility</div>
-        <p class="mt-1 text-sm text-slate-600">Safe transportation (where available)</p>
-        <div class="mt-4 text-sm font-semibold text-slate-900/80 group-hover:text-slate-900">
-          View Photos →
-        </div>
-      </div>
-    </div>
-  </a>
-
-</div>
-
-  </div>
-</section>
+  </section>
 
 
   <!-- Admissions + Enquiry form (Podar-style on same page) -->
-  <section id="admissions" class="py-14 bg-slate-900 text-white">
+  <section
+  id="admissions"
+  class="py-16 text-slate-900 relative overflow-hidden"
+>
+  <!-- Admissions background (highlight) -->
+  <div class="absolute inset-0 -z-10"
+    style="background:
+      radial-gradient(900px 500px at 15% 20%, rgba(15,42,95,0.12), transparent 60%),
+      radial-gradient(700px 420px at 85% 15%, rgba(11,27,58,0.08), transparent 55%),
+      linear-gradient(180deg, rgba(255,255,255,0.85), rgba(243,246,251,0.95));
+    ">
+  </div>
+
+
     <div class="mx-auto max-w-7xl px-4">
       <div class="grid gap-10 lg:grid-cols-2 lg:items-start">
         <div>
           <h2 class="text-3xl font-extrabold tracking-tight">Admissions</h2>
+          <div class="mt-3 inline-flex items-center rounded-full bg-slate-900/5 px-3 py-1 text-xs font-semibold text-slate-700">
+  Admissions Open • 2026–27
+</div>
 
-          <div class="mt-6 rounded-3xl bg-white/5 border border-white/10 p-6">
+
+          <div class="mt-6 rounded-3xl bg-white/90 border border-slate-200 p-6 shadow-sm">
             <div class="font-bold">Admission Process</div>
-            <ol class="mt-3 grid gap-2 text-sm text-white/85 list-decimal list-inside">
+            <ol class="mt-3 grid gap-2 text-sm text-slate-700 list-decimal list-inside">
+
               <li>Submit enquiry / visit school office</li>
               <li>Meet admission team and collect form</li>
               <li>Submit documents + pay fees</li>
@@ -532,18 +618,21 @@
 
           <div id="downloads" class="mt-6 grid gap-3 sm:grid-cols-2">
             <a href="#"
-              class="rounded-2xl bg-white text-slate-900 px-4 py-3 font-semibold text-center hover:bg-slate-100">
+              class="btn-primary inline-flex items-center justify-center rounded-xl px-3 py-2 text-sm font-semibold">
               Download Brochure (PDF)
             </a>
             <a href="#"
-              class="rounded-2xl bg-white/10 border border-white/10 px-4 py-3 font-semibold text-center hover:bg-white/15">
+              class="btn-primary inline-flex items-center justify-center rounded-xl px-3 py-2 text-sm font-semibold">
               Mandatory Disclosure
             </a>
           </div>
         </div>
 
         <!-- Enquiry form -->
-        <div id="enquiry" class="rounded-3xl bg-white text-slate-900 p-6 border border-white/10 shadow-sm">
+        <div id="enquiry"
+  class="rounded-3xl bg-white text-slate-900 p-6 border border-slate-200 shadow-md">
+
+
           <h3 class="text-xl font-extrabold">Enquiry Form</h3>
           <p class="mt-1 text-sm text-slate-600">Submit your details and we will contact you.</p>
 
@@ -588,7 +677,7 @@
               placeholder="Your question (transport, fees, timings, etc.)"></textarea>
 
             <button
-              class="mt-2 inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 font-semibold text-white hover:bg-slate-800">
+              class="btn-primary inline-flex items-center justify-center rounded-xl px-3 py-2 text-sm font-semibold">
               Send Enquiry
             </button>
 
@@ -683,77 +772,79 @@
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-14">
-    <div class="mx-auto max-w-7xl px-4">
-      <div class="grid gap-10 lg:grid-cols-2 lg:items-start">
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200/60 bg-transparent">
+    <div class="mx-auto max-w-7xl px-4 py-12">
+
+      <!-- Top footer -->
+      <div class="grid gap-10 lg:grid-cols-3">
+
+        <!-- Column 1: Contact -->
         <div>
-          <h2 class="text-3xl font-extrabold tracking-tight">Contact Us</h2>
-          <p class="mt-2 text-slate-700">
-            Replace with the school’s real address and contact details.
+          <div class="font-extrabold text-lg">Contact Us</div>
+
+          <p class="mt-4 text-sm text-slate-600 leading-relaxed">
+            #2037, Basava Mantapa,<br>
+            Taralabalu Badavane,<br>
+            Vidyanagara, Davanagere – 577005<br>
+            Karnataka
           </p>
 
-          <div class="mt-6 grid gap-3">
-            <div class="rounded-2xl border border-slate-200 p-5">
-              <div class="text-sm text-slate-500">Address</div>
-              <div class="font-semibold">Maganuru, (Taluk), (District), Karnataka - (PIN)</div>
-            </div>
-            <div class="grid gap-3 sm:grid-cols-2">
-              <div class="rounded-2xl border border-slate-200 p-5">
-                <div class="text-sm text-slate-500">Phone</div>
-                <a class="font-semibold hover:underline" href="tel:+919999999999">+91 99999 99999</a>
-              </div>
-              <div class="rounded-2xl border border-slate-200 p-5">
-                <div class="text-sm text-slate-500">Email</div>
-                <a class="font-semibold hover:underline"
-                  href="mailto:maganurubasappaschool@gmail.com">maganurubasappaschool@gmail.com</a>
-              </div>
-            </div>
+          <div class="mt-4 space-y-2 text-sm">
+            <p>
+              <span class="font-semibold text-slate-900">Email Address :</span>
+              <a href="mailto:maganurubasappaschool@gmail.com" class="text-slate-700 hover:underline">
+                maganurubasappaschool@gmail.com
+              </a>
+            </p>
+
+            <p>
+              <span class="font-semibold text-slate-900">Telephone No :</span>
+              <a href="tel:+919999999999" class="text-slate-700 hover:underline">
+                +91 99999 99999
+              </a>
+            </p>
           </div>
         </div>
 
-        <!-- Map -->
-        <div class="rounded-3xl overflow-hidden border border-slate-200">
-          <!-- Replace src with your Google Maps embed -->
-          <iframe title="School location map" class="w-full h-[360px]" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Davanagere&output=embed">
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="border-t border-slate-200 bg-white">
-    <div class="mx-auto max-w-7xl px-4 py-10">
-      <div class="grid gap-8 lg:grid-cols-3">
+        <!-- Column 2: Quick Links -->
         <div>
-          <div class="font-extrabold">Maganuru Basappa Public School</div>
-          <p class="mt-2 text-sm text-slate-600">
-            A place where every child is guided with care, discipline, and opportunities to shine.
-          </p>
+          <div class="font-extrabold text-lg">Quick Links</div>
+
+          <div class="mt-4 grid grid-cols-2 gap-y-2 text-sm text-slate-700">
+            <a class="hover:underline" href="#about">About</a>
+            <a class="hover:underline" href="#academics">Academics</a>
+            <a class="hover:underline" href="#facilities">Facilities</a>
+            <a class="hover:underline" href="#admissions">Admissions</a>
+            <a class="hover:underline" href="#events">News & Events</a>
+            <a class="hover:underline" href="#faq">FAQ</a>
+          </div>
         </div>
 
-        <div class="grid grid-cols-2 gap-3 text-sm">
-          <a class="hover:underline" href="#about">About</a>
-          <a class="hover:underline" href="#academics">Academics</a>
-          <a class="hover:underline" href="#facilities">Facilities</a>
-          <a class="hover:underline" href="#admissions">Admissions</a>
-          <a class="hover:underline" href="#events">News & Events</a>
-          <a class="hover:underline" href="#faq">FAQ</a>
+        <!-- Column 3: Office Hours -->
+        <div>
+          <div class="font-extrabold text-lg">Office Hours</div>
+
+          <div class="mt-4 text-sm text-slate-600 space-y-1">
+            <div>Mon–Sat: <span class="text-slate-900 font-medium">9:00 AM – 4:00 PM</span></div>
+            <div>Sunday: <span class="text-slate-900 font-medium">Closed</span></div>
+          </div>
         </div>
 
-        <div class="text-sm text-slate-600">
-          <div class="font-semibold text-slate-900">Office Hours</div>
-          <div class="mt-2">Mon–Sat: 9:00 AM – 4:00 PM</div>
-          <div>Sunday: Closed</div>
+      </div>
+
+      <!-- Bottom footer -->
+      <div
+        class="mt-12 pt-6 border-t border-slate-200 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between text-xs text-slate-500">
+        <div>
+          © <span id="year"></span> Maganuru Basappa Public School. All rights reserved.
+        </div>
+        <div>
+          Built by <span class="font-semibold text-slate-700">SidTech</span>
         </div>
       </div>
 
-      <div class="mt-10 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between text-xs text-slate-500">
-        <div>© <span id="year"></span> Maganuru Basappa Public School. All rights reserved.</div>
-        <div>Built by SidTech</div>
-      </div>
     </div>
   </footer>
 
