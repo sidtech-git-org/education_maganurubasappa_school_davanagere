@@ -291,8 +291,8 @@
               <img src="assets/principal.jpg" alt="Principal - Maganuru Basappa Public School"
                 class="h-16 w-16 rounded-2xl object-cover border border-slate-200" />
               <div>
-                <div class="font-extrabold text-lg">Principal’s Message</div>
-                <div class="text-sm text-slate-500">Head of Institution</div>
+                <div class="font-extrabold text-lg">Sri. Sangamesh Gowdru</div>
+                <div class="text-sm text-slate-500">Chairman, Maganuru Basappa Public Trust</div>
               </div>
             </div>
 
@@ -864,41 +864,127 @@
     class="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-lg hover:bg-slate-800">
     WhatsApp
   </a>
-// ✅ Galleries: replace with your real image paths
+
+  <!-- ✅ Lightbox modal -->
+<div id="lightbox" class="fixed inset-0 z-[999] hidden">
+  <div id="lightboxBackdrop" class="absolute inset-0 bg-black/70"></div>
+
+  <div class="relative mx-auto h-full max-w-5xl p-4 flex items-center">
+    <div class="relative w-full rounded-2xl bg-white overflow-hidden shadow-2xl">
+      
+      <!-- Top bar -->
+      <div class="flex items-center justify-between px-4 py-3 border-b">
+        <div class="min-w-0">
+          <div id="lbTitle" class="font-bold truncate">Gallery</div>
+          <div id="lbCount" class="text-xs text-slate-500">1 / 1</div>
+        </div>
+        <button id="lbClose" class="rounded-lg px-3 py-2 hover:bg-slate-100">✕</button>
+      </div>
+
+      <!-- Image area -->
+      <div class="relative bg-slate-100">
+        <img id="lbImg" src="" alt="" class="w-full max-h-[70vh] object-contain select-none" />
+
+        <!-- arrows (hidden on very small screens) -->
+        <button id="lbPrev"
+          class="hidden sm:flex absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 shadow hover:bg-white">
+          ◀
+        </button>
+        <button id="lbNext"
+          class="hidden sm:flex absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 shadow hover:bg-white">
+          ▶
+        </button>
+      </div>
+
+      <!-- thumbnails -->
+      <div id="lbThumbs" class="flex gap-2 p-3 overflow-x-auto border-t bg-white"></div>
+    </div>
+  </div>
+</div>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('hidden') === false;
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+      menuBtn.querySelector('.menu-label').textContent = isOpen ? 'Close' : 'Menu';
+    });
+
+    // Close menu on link click
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.querySelector('.menu-label').textContent = 'Menu';
+      });
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const btn = item.querySelector('.faq-btn');
+      const panel = item.querySelector('.faq-panel');
+      const icon = item.querySelector('.faq-icon');
+      btn.addEventListener('click', () => {
+        const open = !panel.classList.contains('hidden');
+
+        // close all
+        document.querySelectorAll('.faq-panel').forEach(p => p.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(i => i.textContent = '+');
+
+        // open clicked
+        if (!open) {
+          panel.classList.remove('hidden');
+          icon.textContent = '–';
+        }
+      });
+    });
+
+    // ✅ Galleries: replace with your real image paths
 const galleries = {
   classrooms: {
     title: "Spacious Classrooms",
     images: [
-      "assets/img/classrooms/image.png",
-      "assets/img/classrooms/2.jpg",
-      "assets/img/classrooms/3.jpg",
+      "assets/img/classrooms/image1.jpg",
+      "assets/img/classrooms/image2.jpg",
+      "assets/img/classrooms/image3.jpg",
     ],
   },
   science: {
     title: "Science Laboratory",
     images: [
-      "assets/img/science/1.jpg",
-      "assets/img/science/2.jpg",
+      "assets/img/sciencelab/image1.jpg",
+      "assets/img/sciencelab/image2.jpg",
     ],
   },
   computer: {
     title: "Computer Lab",
     images: [
-      "assets/img/computer/1.jpg",
-      "assets/img/computer/2.jpg",
+      "assets/img/computerlab/image1.jpg",
+      "assets/img/computerlab/image2.jpg",
     ],
   },
   library: {
     title: "Library",
-    images: ["assets/img/library/1.jpg"],
+    images: [
+      "assets/img/library/image1.jpg",
+      "assets/img/library/image2.jpg"
+    ],
   },
   playground: {
     title: "Playground",
-    images: ["assets/img/playground/1.jpg"],
+    images: [
+      "assets/img/playground/image1.jpg",
+      "assets/img/playground/image2.jpg"
+    ],
   },
   transport: {
     title: "Transport Facility",
-    images: ["assets/img/transport/1.jpg"],
+    images: ["assets/img/transport/image1.jpg"],
   },
 };
 
@@ -995,84 +1081,8 @@ lbImg.addEventListener("touchend", (e) => {
   }
 }, { passive: true });
 
-  <script>
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Mobile menu
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('hidden') === false;
-      menuBtn.setAttribute('aria-expanded', String(isOpen));
-      menuBtn.querySelector('.menu-label').textContent = isOpen ? 'Close' : 'Menu';
-    });
-
-    // Close menu on link click
-    mobileMenu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        menuBtn.setAttribute('aria-expanded', 'false');
-        menuBtn.querySelector('.menu-label').textContent = 'Menu';
-      });
-    });
-
-    // FAQ accordion
-    document.querySelectorAll('.faq-item').forEach(item => {
-      const btn = item.querySelector('.faq-btn');
-      const panel = item.querySelector('.faq-panel');
-      const icon = item.querySelector('.faq-icon');
-      btn.addEventListener('click', () => {
-        const open = !panel.classList.contains('hidden');
-
-        // close all
-        document.querySelectorAll('.faq-panel').forEach(p => p.classList.add('hidden'));
-        document.querySelectorAll('.faq-icon').forEach(i => i.textContent = '+');
-
-        // open clicked
-        if (!open) {
-          panel.classList.remove('hidden');
-          icon.textContent = '–';
-        }
-      });
-    });
   </script>
-  <!-- ✅ Lightbox modal -->
-<div id="lightbox" class="fixed inset-0 z-[999] hidden">
-  <div id="lightboxBackdrop" class="absolute inset-0 bg-black/70"></div>
-
-  <div class="relative mx-auto h-full max-w-5xl p-4 flex items-center">
-    <div class="relative w-full rounded-2xl bg-white overflow-hidden shadow-2xl">
-      
-      <!-- Top bar -->
-      <div class="flex items-center justify-between px-4 py-3 border-b">
-        <div class="min-w-0">
-          <div id="lbTitle" class="font-bold truncate">Gallery</div>
-          <div id="lbCount" class="text-xs text-slate-500">1 / 1</div>
-        </div>
-        <button id="lbClose" class="rounded-lg px-3 py-2 hover:bg-slate-100">✕</button>
-      </div>
-
-      <!-- Image area -->
-      <div class="relative bg-slate-100">
-        <img id="lbImg" src="" alt="" class="w-full max-h-[70vh] object-contain select-none" />
-
-        <!-- arrows (hidden on very small screens) -->
-        <button id="lbPrev"
-          class="hidden sm:flex absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 shadow hover:bg-white">
-          ◀
-        </button>
-        <button id="lbNext"
-          class="hidden sm:flex absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 shadow hover:bg-white">
-          ▶
-        </button>
-      </div>
-
-      <!-- thumbnails -->
-      <div id="lbThumbs" class="flex gap-2 p-3 overflow-x-auto border-t bg-white"></div>
-    </div>
-  </div>
-</div>
+  
 
 </body>
 
