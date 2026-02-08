@@ -35,7 +35,8 @@
 
     /* Simple pattern background */
     .dot-grid {
-      background-image: radial-gradient(rgba(15, 23, 42, 0.07) 1px, transparent 1px);
+      background-image: radial-gradient(rgba(15, 23, 42, 0.06) 1px, transparent 1px);
+
       background-size: 22px 22px;
     }
 
@@ -67,7 +68,8 @@
     }
 
     .card-premium {
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.92);
+
       border: 1px solid rgba(15, 23, 42, 0.10);
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
       backdrop-filter: blur(8px);
@@ -80,62 +82,78 @@
     }
 
     .nav-pill {
-  padding: 0.45rem 0.9rem;
-  border-radius: 9999px;
-  font-weight: 500;
-  color: #0f172a; /* slate-900 */
-  transition: all 0.25s ease;
-}
+      padding: 0.45rem 0.9rem;
+      border-radius: 9999px;
+      font-weight: 500;
+      color: #0f172a;
+      /* slate-900 */
+      transition: all 0.25s ease;
+    }
 
-.nav-pill:hover {
-  background: rgba(15, 23, 42, 0.06);
-}
+    /* Headings in brand navy */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--brand-navy);
+    }
 
-.nav-pill:focus-visible {
-  outline: 2px solid rgba(15, 42, 95, 0.35);
-  outline-offset: 2px;
-}
 
+    .nav-pill:hover {
+      background: rgba(15, 23, 42, 0.06);
+    }
+
+    .nav-pill:focus-visible {
+      outline: 2px solid rgba(15, 42, 95, 0.35);
+      outline-offset: 2px;
+    }
   </style>
 </head>
 
-<body class="text-slate-900 bg-[#f3f6fb]">
+<body class="text-slate-900 bg-white">
+
   <!-- Global soft background -->
   <div class="pointer-events-none fixed inset-0 -z-10">
-    <div class="absolute inset-0 bg-[#f3f6fb]"></div>
+    <div class="absolute inset-0 bg-white"></div>
     <div class="absolute inset-0" style="background:
         radial-gradient(900px 500px at 20% 10%, rgba(15,42,95,0.10), transparent 60%),
         radial-gradient(700px 420px at 85% 20%, rgba(11,27,58,0.06), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,0.55), rgba(243,246,251,1));
+        linear-gradient(180deg, rgba(255,255,255,0.65), rgba(251,253,255,1));
       ">
     </div>
-     <!-- Decorative education icons (very light) -->
-  <svg class="absolute left-8 top-28 opacity-[0.10]" width="140" height="140" viewBox="0 0 64 64" fill="none" stroke="#0b1b3a" stroke-width="1.5">
-    <!-- Graduation cap -->
-    <path d="M8 22l24-10 24 10-24 10L8 22z"/>
-    <path d="M16 26v10c0 6 32 6 32 0V26"/>
-    <path d="M48 26v10"/>
-  </svg>
+    <!-- Decorative education icons (very light) -->
+    <svg class="absolute left-8 top-28 opacity-[0.10]" width="140" height="140" viewBox="0 0 64 64" fill="none"
+      stroke="#0b1b3a" stroke-width="1.5">
+      <!-- Graduation cap -->
+      <path d="M8 22l24-10 24 10-24 10L8 22z" />
+      <path d="M16 26v10c0 6 32 6 32 0V26" />
+      <path d="M48 26v10" />
+    </svg>
 
-  <svg class="absolute right-10 top-44 opacity-[0.04]" width="160" height="160" viewBox="0 0 64 64" fill="none" stroke="#0f2a5f" stroke-width="1.5">
-    <!-- Pencil -->
-    <path d="M14 50l8-2 28-28-6-6-28 28-2 8z"/>
-    <path d="M40 14l6 6"/>
-  </svg>
+    <svg class="absolute right-10 top-44 opacity-[0.04]" width="160" height="160" viewBox="0 0 64 64" fill="none"
+      stroke="#0f2a5f" stroke-width="1.5">
+      <!-- Pencil -->
+      <path d="M14 50l8-2 28-28-6-6-28 28-2 8z" />
+      <path d="M40 14l6 6" />
+    </svg>
 
-  <svg class="absolute left-14 bottom-24 opacity-[0.04]" width="150" height="150" viewBox="0 0 64 64" fill="none" stroke="#0f2a5f" stroke-width="1.5">
-    <!-- Book -->
-    <path d="M10 14h18c4 0 8 2 8 6v32c0-4-4-6-8-6H10V14z"/>
-    <path d="M54 14H36c-4 0-8 2-8 6v32c0-4 4-6 8-6h18V14z"/>
-  </svg>
+    <svg class="absolute left-14 bottom-24 opacity-[0.04]" width="150" height="150" viewBox="0 0 64 64" fill="none"
+      stroke="#0f2a5f" stroke-width="1.5">
+      <!-- Book -->
+      <path d="M10 14h18c4 0 8 2 8 6v32c0-4-4-6-8-6H10V14z" />
+      <path d="M54 14H36c-4 0-8 2-8 6v32c0-4 4-6 8-6h18V14z" />
+    </svg>
 
-  <svg class="absolute right-16 bottom-16 opacity-[0.04]" width="140" height="140" viewBox="0 0 64 64" fill="none" stroke="#0b1b3a" stroke-width="1.5">
-    <!-- Sports ball -->
-    <circle cx="32" cy="32" r="18"/>
-    <path d="M14 32c6 2 12-3 14-10"/>
-    <path d="M50 32c-6-2-12 3-14 10"/>
-  </svg>
-</div>
+    <svg class="absolute right-16 bottom-16 opacity-[0.04]" width="140" height="140" viewBox="0 0 64 64" fill="none"
+      stroke="#0b1b3a" stroke-width="1.5">
+      <!-- Sports ball -->
+      <circle cx="32" cy="32" r="18" />
+      <path d="M14 32c6 2 12-3 14-10" />
+      <path d="M50 32c-6-2-12 3-14 10" />
+    </svg>
+  </div>
   </div>
   <!-- Top CTA bar -->
   <div class="text-white" style="background:linear-gradient(135deg,var(--brand-navy),var(--brand-navy-2));">
@@ -145,14 +163,16 @@
         <span class="opacity-90">• Academic Year 2026–27</span>
       </div>
       <div class="flex gap-2">
-        <a href="#disclosure"
+        <a href="assets/md/mandatory-disclosure.pdf" target="_blank" rel="noopener"
           class="inline-flex items-center justify-center rounded-lg bg-white/10 px-3 py-1.5 text-sm hover:bg-white/20">
           Mandatory Disclosure
         </a>
-        <a href="#downloads"
+
+        <a href="assets/brochure/brochure.pdf" target="_blank" rel="noopener"
           class="inline-flex items-center justify-center rounded-lg bg-white px-3 py-1.5 text-sm font-semibold text-slate-900 hover:bg-slate-100">
           Download Brochure
         </a>
+
       </div>
 
     </div>
@@ -160,91 +180,79 @@
 
   <!-- Header / Navbar -->
   <header class="sticky top-0 z-50 bg-white/85 backdrop-blur border-b border-slate-200">
-  <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between gap-3">
-    
-    <!-- Left: Logo + Name -->
-    <a href="#" class="flex items-center gap-3 min-w-0 flex-1">
-      <img
-        src="assets/logo.png"
-        alt="Maganuru Basappa Public School Logo"
-        class="h-10 w-10 sm:h-12 sm:w-12 rounded-xl object-contain"
-      />
+    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between gap-3">
 
-      <div class="min-w-0 flex flex-col">
-  <div class="font-extrabold tracking-tight text-[15px] sm:text-xl leading-tight h-font truncate">
-    Maganuru Basappa Public School
-  </div>
-  <div class="text-[11px] sm:text-xs text-slate-600 truncate">
-    Taralabalu Badavane, Davanagere
-  </div>
-</div>
+      <!-- Left: Logo + Name -->
+      <a href="#" class="flex items-center gap-3 min-w-0 flex-1">
+        <img src="assets/logo.png" alt="Maganuru Basappa Public School Logo"
+          class="h-10 w-10 sm:h-12 sm:w-12 rounded-xl object-contain" />
 
-    </a>
+        <div class="min-w-0 flex flex-col">
+          <div class="font-extrabold tracking-tight text-[15px] sm:text-xl leading-tight h-font truncate">
+            Maganuru Basappa Public School
+          </div>
+          <div class="text-[11px] sm:text-xs text-slate-600 truncate">
+            Taralabalu Badavane, Davanagere
+          </div>
+        </div>
 
-    <!-- Desktop nav -->
-    <nav class="hidden lg:flex items-center gap-1 text-sm">
-      <a class="nav-pill" href="#about">About</a>
-      <a class="nav-pill" href="#academics">Academics</a>
-      <a class="nav-pill" href="#facilities">Facilities</a>
-      <a class="nav-pill" href="#admissions">Admissions</a>
-      <a class="nav-pill" href="#events">News & Events</a>
-      <a class="nav-pill" href="#faq">FAQ</a>
-      <a class="nav-pill" href="#contact">Contact</a>
-    </nav>
-
-    <!-- Desktop CTA -->
-    <div class="hidden lg:flex items-center gap-2">
-      <a
-        href="#admissions"
-        class="btn-primary inline-flex items-center justify-center rounded-xl px-3 py-2 text-sm font-semibold"
-      >
-        Apply / Enquire
       </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden lg:flex items-center gap-1 text-sm">
+        <a class="nav-pill" href="#about">About</a>
+        <a class="nav-pill" href="#academics">Academics</a>
+        <a class="nav-pill" href="#facilities">Facilities</a>
+        <a class="nav-pill" href="#admissions">Admissions</a>
+        <a class="nav-pill" href="#events">News & Events</a>
+        <a class="nav-pill" href="#faq">FAQ</a>
+        <a class="nav-pill" href="#contact">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <div class="hidden lg:flex items-center gap-2">
+        <a href="#admissions"
+          class="btn-primary inline-flex items-center justify-center rounded-xl px-3 py-2 text-sm font-semibold">
+          Apply / Enquire
+        </a>
+      </div>
+
+      <!-- Mobile Menu button (RIGHT) -->
+      <button id="menuBtn"
+        class="lg:hidden btn-primary shrink-0 inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-semibold shadow-md active:scale-[0.98] transition"
+        aria-expanded="false">
+        <span class="text-base leading-none">☰</span>
+        <span class="menu-label hidden sm:inline">Menu</span>
+      </button>
+
+
     </div>
 
-    <!-- Mobile Menu button (RIGHT) -->
-    <button
-  id="menuBtn"
-  class="lg:hidden btn-primary shrink-0 inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-semibold shadow-md active:scale-[0.98] transition"
-  aria-expanded="false"
->
-  <span class="text-base leading-none">☰</span>
-  <span class="menu-label hidden sm:inline">Menu</span>
-</button>
+    <!-- Mobile menu panel -->
+    <div id="mobileMenu" class="lg:hidden hidden border-t border-slate-200 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-3 grid gap-1 text-sm">
+        <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#about">About</a>
+        <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#academics">Academics</a>
+        <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#facilities">Facilities</a>
+        <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#admissions">Admissions</a>
+        <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#events">News & Events</a>
+        <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#faq">FAQ</a>
+        <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#contact">Contact</a>
 
-
-  </div>
-
-  <!-- Mobile menu panel -->
-  <div id="mobileMenu" class="lg:hidden hidden border-t border-slate-200 bg-white">
-    <div class="mx-auto max-w-7xl px-4 py-3 grid gap-1 text-sm">
-      <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#about">About</a>
-      <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#academics">Academics</a>
-      <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#facilities">Facilities</a>
-      <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#admissions">Admissions</a>
-      <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#events">News & Events</a>
-      <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#faq">FAQ</a>
-      <a class="px-3 py-2 rounded-lg hover:bg-slate-100" href="#contact">Contact</a>
-
-      <a
-        class="mt-2 btn-primary inline-flex items-center justify-center rounded-xl px-4 py-2 font-semibold"
-        href="#admissions"
-      >
-        Apply / Enquire
-      </a>
+        <a class="mt-2 btn-primary inline-flex items-center justify-center rounded-xl px-4 py-2 font-semibold"
+          href="#admissions">
+          Apply / Enquire
+        </a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
 
   <!-- Full Width Banner Section -->
   <section class="w-full">
-  <img
-    src="assets/img/schoolbuilding.webp"
-    alt="Maganur Basappa Public School & College"
-    class="w-full h-[32vh] sm:h-[45vh] lg:h-[60vh] object-cover object-top"
-  />
-</section>
+    <img src="assets/img/schoolbuilding.webp" alt="Maganur Basappa Public School & College"
+      class="w-full h-[32vh] sm:h-[45vh] lg:h-[60vh] object-cover object-top" />
+  </section>
 
 
 
@@ -302,10 +310,6 @@
               individuals. Our dedicated teachers, supportive environment, and strong values ensure
               that every child is prepared for both life and learning.
             </p>
-
-            <p class="mt-3 text-sm font-semibold text-slate-800">
-              — Principal, Maganuru Basappa Public School
-            </p>
           </div>
         </div>
 
@@ -324,7 +328,8 @@
 
           <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             <!-- Card -->
-            <div class="rounded-3xl bg-white/80 backdrop-blur border border-slate-200/70 p-6 hover:shadow-md transition">
+            <div
+              class="rounded-3xl bg-white/80 backdrop-blur border border-slate-200/70 p-6 hover:shadow-md transition">
 
               <h3 class="mt-4 font-bold text-lg">Academic Excellence</h3>
               <p class="mt-2 text-sm text-slate-700">
@@ -332,7 +337,8 @@
               </p>
             </div>
 
-            <div class="rounded-3xl bg-white/80 backdrop-blur border border-slate-200/70 p-6 hover:shadow-md transition">
+            <div
+              class="rounded-3xl bg-white/80 backdrop-blur border border-slate-200/70 p-6 hover:shadow-md transition">
 
 
               <h3 class="mt-4 font-bold text-lg">Safe & Supportive Campus</h3>
@@ -341,7 +347,8 @@
               </p>
             </div>
 
-            <div class="rounded-3xl bg-white/80 backdrop-blur border border-slate-200/70 p-6 hover:shadow-md transition">
+            <div
+              class="rounded-3xl bg-white/80 backdrop-blur border border-slate-200/70 p-6 hover:shadow-md transition">
 
 
               <h3 class="mt-4 font-bold text-lg">Trained Teachers</h3>
@@ -350,7 +357,8 @@
               </p>
             </div>
 
-            <div class="rounded-3xl bg-white/80 backdrop-blur border border-slate-200/70 p-6 hover:shadow-md transition">
+            <div
+              class="rounded-3xl bg-white/80 backdrop-blur border border-slate-200/70 p-6 hover:shadow-md transition">
 
 
               <h3 class="mt-4 font-bold text-lg">Co-curricular Activities</h3>
@@ -359,7 +367,8 @@
               </p>
             </div>
 
-            <div class="rounded-3xl bg-white/80 backdrop-blur border border-slate-200/70 p-6 hover:shadow-md transition">
+            <div
+              class="rounded-3xl bg-white/80 backdrop-blur border border-slate-200/70 p-6 hover:shadow-md transition">
 
 
               <h3 class="mt-4 font-bold text-lg">Labs & Digital Learning</h3>
@@ -368,7 +377,8 @@
               </p>
             </div>
 
-            <div class="rounded-3xl bg-white/80 backdrop-blur border border-slate-200/70 p-6 hover:shadow-md transition">
+            <div
+              class="rounded-3xl bg-white/80 backdrop-blur border border-slate-200/70 p-6 hover:shadow-md transition">
 
 
               <h3 class="mt-4 font-bold text-lg">Values & Character</h3>
@@ -591,27 +601,24 @@
 
 
   <!-- Admissions + Enquiry form (Podar-style on same page) -->
-  <section
-  id="admissions"
-  class="py-16 text-slate-900 relative overflow-hidden"
->
-  <!-- Admissions background (highlight) -->
-  <div class="absolute inset-0 -z-10"
-    style="background:
+  <section id="admissions" class="py-16 text-slate-900 relative overflow-hidden">
+    <!-- Admissions background (highlight) -->
+    <div class="absolute inset-0 -z-10" style="background:
       radial-gradient(900px 500px at 15% 20%, rgba(15,42,95,0.12), transparent 60%),
       radial-gradient(700px 420px at 85% 15%, rgba(11,27,58,0.08), transparent 55%),
       linear-gradient(180deg, rgba(255,255,255,0.85), rgba(243,246,251,0.95));
     ">
-  </div>
+    </div>
 
 
     <div class="mx-auto max-w-7xl px-4">
       <div class="grid gap-10 lg:grid-cols-2 lg:items-start">
         <div>
           <h2 class="text-3xl font-extrabold tracking-tight">Admissions</h2>
-          <div class="mt-3 inline-flex items-center rounded-full bg-slate-900/5 px-3 py-1 text-xs font-semibold text-slate-700">
-  Admissions Open • 2026–27
-</div>
+          <div
+            class="mt-3 inline-flex items-center rounded-full bg-slate-900/5 px-3 py-1 text-xs font-semibold text-slate-700">
+            Admissions Open • 2026–27
+          </div>
 
 
           <div class="mt-6 rounded-3xl bg-white/90 border border-slate-200 p-6 shadow-sm">
@@ -626,20 +633,21 @@
           </div>
 
           <div id="downloads" class="mt-6 grid gap-3 sm:grid-cols-2">
-            <a href="#"
+            <a href="assets/brochure/brochure.pdf" target="_blank" rel="noopener"
               class="btn-primary inline-flex items-center justify-center rounded-xl px-3 py-2 text-sm font-semibold">
               Download Brochure (PDF)
             </a>
-            <a href="#"
+
+            <a href="assets/md/mandatory-disclosure.pdf" target="_blank" rel="noopener"
               class="btn-primary inline-flex items-center justify-center rounded-xl px-3 py-2 text-sm font-semibold">
               Mandatory Disclosure
             </a>
+
           </div>
         </div>
 
         <!-- Enquiry form -->
-        <div id="enquiry"
-  class="rounded-3xl bg-white text-slate-900 p-6 border border-slate-200 shadow-md">
+        <div id="enquiry" class="rounded-3xl bg-white text-slate-900 p-6 border border-slate-200 shadow-md">
 
 
           <h3 class="text-xl font-extrabold">Enquiry Form</h3>
@@ -857,50 +865,42 @@
     </div>
   </footer>
 
-  <!-- Floating WhatsApp -->
-  <!-- Replace number -->
-  <a href="https://wa.me/919999999999?text=Hello%20Maganuru%20Basappa%20School%2C%20I%20want%20admission%20details."
-    target="_blank" rel="noopener"
-    class="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-lg hover:bg-slate-800">
-    WhatsApp
-  </a>
-
   <!-- ✅ Lightbox modal -->
-<div id="lightbox" class="fixed inset-0 z-[999] hidden">
-  <div id="lightboxBackdrop" class="absolute inset-0 bg-black/70"></div>
+  <div id="lightbox" class="fixed inset-0 z-[999] hidden">
+    <div id="lightboxBackdrop" class="absolute inset-0 bg-black/70"></div>
 
-  <div class="relative mx-auto h-full max-w-5xl p-4 flex items-center">
-    <div class="relative w-full rounded-2xl bg-white overflow-hidden shadow-2xl">
-      
-      <!-- Top bar -->
-      <div class="flex items-center justify-between px-4 py-3 border-b">
-        <div class="min-w-0">
-          <div id="lbTitle" class="font-bold truncate">Gallery</div>
-          <div id="lbCount" class="text-xs text-slate-500">1 / 1</div>
+    <div class="relative mx-auto h-full max-w-5xl p-4 flex items-center">
+      <div class="relative w-full rounded-2xl bg-white overflow-hidden shadow-2xl">
+
+        <!-- Top bar -->
+        <div class="flex items-center justify-between px-4 py-3 border-b">
+          <div class="min-w-0">
+            <div id="lbTitle" class="font-bold truncate">Gallery</div>
+            <div id="lbCount" class="text-xs text-slate-500">1 / 1</div>
+          </div>
+          <button id="lbClose" class="rounded-lg px-3 py-2 hover:bg-slate-100">✕</button>
         </div>
-        <button id="lbClose" class="rounded-lg px-3 py-2 hover:bg-slate-100">✕</button>
+
+        <!-- Image area -->
+        <div class="relative bg-slate-100">
+          <img id="lbImg" src="" alt="" class="w-full max-h-[70vh] object-contain select-none" />
+
+          <!-- arrows (hidden on very small screens) -->
+          <button id="lbPrev"
+            class="hidden sm:flex absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 shadow hover:bg-white">
+            ◀
+          </button>
+          <button id="lbNext"
+            class="hidden sm:flex absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 shadow hover:bg-white">
+            ▶
+          </button>
+        </div>
+
+        <!-- thumbnails -->
+        <div id="lbThumbs" class="flex gap-2 p-3 overflow-x-auto border-t bg-white"></div>
       </div>
-
-      <!-- Image area -->
-      <div class="relative bg-slate-100">
-        <img id="lbImg" src="" alt="" class="w-full max-h-[70vh] object-contain select-none" />
-
-        <!-- arrows (hidden on very small screens) -->
-        <button id="lbPrev"
-          class="hidden sm:flex absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 shadow hover:bg-white">
-          ◀
-        </button>
-        <button id="lbNext"
-          class="hidden sm:flex absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 shadow hover:bg-white">
-          ▶
-        </button>
-      </div>
-
-      <!-- thumbnails -->
-      <div id="lbThumbs" class="flex gap-2 p-3 overflow-x-auto border-t bg-white"></div>
     </div>
   </div>
-</div>
 
   <script>
     // Footer year
@@ -945,144 +945,144 @@
     });
 
     // ✅ Galleries: replace with your real image paths
-const galleries = {
-  classrooms: {
-    title: "Spacious Classrooms",
-    images: [
-      "assets/img/classrooms/image1.jpg",
-      "assets/img/classrooms/image2.jpg",
-      "assets/img/classrooms/image3.jpg",
-    ],
-  },
-  science: {
-    title: "Science Laboratory",
-    images: [
-      "assets/img/sciencelab/image1.jpg",
-      "assets/img/sciencelab/image2.jpg",
-    ],
-  },
-  computer: {
-    title: "Computer Lab",
-    images: [
-      "assets/img/computerlab/image1.jpg",
-      "assets/img/computerlab/image2.jpg",
-    ],
-  },
-  library: {
-    title: "Library",
-    images: [
-      "assets/img/library/image1.jpg",
-      "assets/img/library/image2.jpg"
-    ],
-  },
-  playground: {
-    title: "Playground",
-    images: [
-      "assets/img/playground/image1.jpg",
-      "assets/img/playground/image2.jpg"
-    ],
-  },
-  transport: {
-    title: "Transport Facility",
-    images: ["assets/img/transport/image1.jpg"],
-  },
-};
+    const galleries = {
+      classrooms: {
+        title: "Spacious Classrooms",
+        images: [
+          "assets/img/classrooms/image1.jpg",
+          "assets/img/classrooms/image2.jpg",
+          "assets/img/classrooms/image3.jpg",
+        ],
+      },
+      science: {
+        title: "Science Laboratory",
+        images: [
+          "assets/img/sciencelab/image1.jpg",
+          "assets/img/sciencelab/image2.jpg",
+        ],
+      },
+      computer: {
+        title: "Computer Lab",
+        images: [
+          "assets/img/computerlab/image1.jpg",
+          "assets/img/computerlab/image2.jpg",
+        ],
+      },
+      library: {
+        title: "Library",
+        images: [
+          "assets/img/library/image1.jpg",
+          "assets/img/library/image2.jpg"
+        ],
+      },
+      playground: {
+        title: "Playground",
+        images: [
+          "assets/img/playground/image1.jpg",
+          "assets/img/playground/image2.jpg"
+        ],
+      },
+      transport: {
+        title: "Transport Facility",
+        images: ["assets/img/transport/image1.jpg"],
+      },
+    };
 
-const lb = document.getElementById("lightbox");
-const lbBackdrop = document.getElementById("lightboxBackdrop");
-const lbImg = document.getElementById("lbImg");
-const lbTitle = document.getElementById("lbTitle");
-const lbCount = document.getElementById("lbCount");
-const lbThumbs = document.getElementById("lbThumbs");
-const lbPrev = document.getElementById("lbPrev");
-const lbNext = document.getElementById("lbNext");
-const lbClose = document.getElementById("lbClose");
+    const lb = document.getElementById("lightbox");
+    const lbBackdrop = document.getElementById("lightboxBackdrop");
+    const lbImg = document.getElementById("lbImg");
+    const lbTitle = document.getElementById("lbTitle");
+    const lbCount = document.getElementById("lbCount");
+    const lbThumbs = document.getElementById("lbThumbs");
+    const lbPrev = document.getElementById("lbPrev");
+    const lbNext = document.getElementById("lbNext");
+    const lbClose = document.getElementById("lbClose");
 
-let lbKey = null;
-let lbIndex = 0;
+    let lbKey = null;
+    let lbIndex = 0;
 
-function renderLightbox() {
-  const { title, images } = galleries[lbKey];
-  lbTitle.textContent = title;
-  lbImg.src = images[lbIndex];
-  lbImg.alt = `${title} - ${lbIndex + 1}`;
-  lbCount.textContent = `${lbIndex + 1} / ${images.length}`;
+    function renderLightbox() {
+      const { title, images } = galleries[lbKey];
+      lbTitle.textContent = title;
+      lbImg.src = images[lbIndex];
+      lbImg.alt = `${title} - ${lbIndex + 1}`;
+      lbCount.textContent = `${lbIndex + 1} / ${images.length}`;
 
-  // thumbs
-  lbThumbs.innerHTML = "";
-  images.forEach((src, i) => {
-    const b = document.createElement("button");
-    b.className =
-      "shrink-0 rounded-xl border " +
-      (i === lbIndex ? "border-slate-900" : "border-slate-200") +
-      " overflow-hidden";
-    b.innerHTML = `<img src="${src}" class="h-14 w-20 object-cover" alt="">`;
-    b.addEventListener("click", () => {
-      lbIndex = i;
+      // thumbs
+      lbThumbs.innerHTML = "";
+      images.forEach((src, i) => {
+        const b = document.createElement("button");
+        b.className =
+          "shrink-0 rounded-xl border " +
+          (i === lbIndex ? "border-slate-900" : "border-slate-200") +
+          " overflow-hidden";
+        b.innerHTML = `<img src="${src}" class="h-14 w-20 object-cover" alt="">`;
+        b.addEventListener("click", () => {
+          lbIndex = i;
+          renderLightbox();
+        });
+        lbThumbs.appendChild(b);
+      });
+    }
+
+    function openGallery(key, startIndex = 0) {
+      if (!galleries[key] || !galleries[key].images?.length) return;
+      lbKey = key;
+      lbIndex = startIndex;
+      lb.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
       renderLightbox();
+    }
+
+    function closeGallery() {
+      lb.classList.add("hidden");
+      document.body.style.overflow = "";
+    }
+
+    function nextImg() {
+      const imgs = galleries[lbKey].images;
+      lbIndex = (lbIndex + 1) % imgs.length;
+      renderLightbox();
+    }
+
+    function prevImg() {
+      const imgs = galleries[lbKey].images;
+      lbIndex = (lbIndex - 1 + imgs.length) % imgs.length;
+      renderLightbox();
+    }
+
+    // buttons / backdrop
+    lbNext.addEventListener("click", nextImg);
+    lbPrev.addEventListener("click", prevImg);
+    lbClose.addEventListener("click", closeGallery);
+    lbBackdrop.addEventListener("click", closeGallery);
+
+    // keyboard
+    document.addEventListener("keydown", (e) => {
+      if (lb.classList.contains("hidden")) return;
+      if (e.key === "Escape") closeGallery();
+      if (e.key === "ArrowRight") nextImg();
+      if (e.key === "ArrowLeft") prevImg();
     });
-    lbThumbs.appendChild(b);
-  });
-}
 
-function openGallery(key, startIndex = 0) {
-  if (!galleries[key] || !galleries[key].images?.length) return;
-  lbKey = key;
-  lbIndex = startIndex;
-  lb.classList.remove("hidden");
-  document.body.style.overflow = "hidden";
-  renderLightbox();
-}
+    // ✅ mobile swipe (touch)
+    let touchStartX = 0;
+    let touchEndX = 0;
 
-function closeGallery() {
-  lb.classList.add("hidden");
-  document.body.style.overflow = "";
-}
+    lbImg.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
 
-function nextImg() {
-  const imgs = galleries[lbKey].images;
-  lbIndex = (lbIndex + 1) % imgs.length;
-  renderLightbox();
-}
-
-function prevImg() {
-  const imgs = galleries[lbKey].images;
-  lbIndex = (lbIndex - 1 + imgs.length) % imgs.length;
-  renderLightbox();
-}
-
-// buttons / backdrop
-lbNext.addEventListener("click", nextImg);
-lbPrev.addEventListener("click", prevImg);
-lbClose.addEventListener("click", closeGallery);
-lbBackdrop.addEventListener("click", closeGallery);
-
-// keyboard
-document.addEventListener("keydown", (e) => {
-  if (lb.classList.contains("hidden")) return;
-  if (e.key === "Escape") closeGallery();
-  if (e.key === "ArrowRight") nextImg();
-  if (e.key === "ArrowLeft") prevImg();
-});
-
-// ✅ mobile swipe (touch)
-let touchStartX = 0;
-let touchEndX = 0;
-
-lbImg.addEventListener("touchstart", (e) => {
-  touchStartX = e.changedTouches[0].screenX;
-}, { passive: true });
-
-lbImg.addEventListener("touchend", (e) => {
-  touchEndX = e.changedTouches[0].screenX;
-  const dx = touchEndX - touchStartX;
-  if (Math.abs(dx) > 50) {
-    dx < 0 ? nextImg() : prevImg();
-  }
-}, { passive: true });
+    lbImg.addEventListener("touchend", (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const dx = touchEndX - touchStartX;
+      if (Math.abs(dx) > 50) {
+        dx < 0 ? nextImg() : prevImg();
+      }
+    }, { passive: true });
 
   </script>
-  
+
 
 </body>
 
